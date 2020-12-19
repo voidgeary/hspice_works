@@ -1,0 +1,1499 @@
+ ****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******                   
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice_A-2008.03\license.warn
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: c:\users\user\desktop\vlsi\programmable_output_driver\0.9_nor2.sp 
+ Init: read install configuration file: C:\synopsys\Hspice_A-2008.03\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+
+
+
+
+ .lib "c:\synopsys\lib\cic018.l" tt
+
+ .param
+ *1.8v nmos 
+ +  dtox_n_18      =   0.0000e+00        dxl_n_18       =   0.0000e+00                
+ +  dxw_n_18       =   0.0000e+00        dvth0_n_18     =   0.0000e+00                
+ +  du0_n_18       =   0.0000e+00        dlvth0_n_18    =   0.0000e+00
+ +  dwvth0_n_18    =   0.0000e+00        dwu0_n_18      =   0.0000e+00
+ +  dpvth0_n_18    =   0.0000e+00        dpvsat_n_18    =   0.0000e+00
+ +  dcgdo_n_18     =   0.0000e+00        dcgso_n_18     =   0.0000e+00                
+ +  dcj_n_18       =   0.0000e+00        dcjsw_n_18     =   0.0000e+00                
+ +  dcjgate_n_18   =   0.0000e+00  
+ *1.8v pmos 
+ +  dtox_p_18      =   0.0000e+00        du0_p_18       =   0.0000e+00
+ +  dxl_p_18       =   0.0000e+00        dxw_p_18       =   0.0000e+00                
+ +  dvth0_p_18     =   0.0000e+00        dlvth0_p_18    =   0.0000e+00
+ +  dwvth0_p_18    =   0.0000e+00  	dpvth0_p_18    =   0.0000e+00                  dpvsat_p_18    =   0.0000e+00
+ +  dcgdo_p_18     =   0.0000e+00                
+ +  dcgso_p_18     =   0.0000e+00        dcj_p_18       =   0.0000e+00                
+ +  dcjsw_p_18     =   0.0000e+00        dcjgate_p_18   =   0.0000e+00                
+
+ *1.8v nmos deep_nwell
+ +  dtox_n_bpw_18   =   0.0000e+00       dxl_n_bpw_18       =   0.0000e+00                
+ +  dxw_n_bpw_18    =   0.0000e+00       dvth0_n_bpw_18     =   0.0000e+00                
+ +  du0_n_bpw_18    =   0.0000e+00       dlvth0_n_bpw_18    =   0.0000e+00
+ +  dwvth0_n_bpw_18 =   0.0000e+00       dwu0_n_bpw_18      =   0.0000e+00
+ +  dpvth0_n_bpw_18 =   0.0000e+00       dpvsat_n_bpw_18    =   0.0000e+00
+ +  dcgdo_n_bpw_18  =   0.0000e+00       dcgso_n_bpw_18     =   0.0000e+00                
+ +  dcj_n_bpw_18    =   0.0000e+00       dcjsw_n_bpw_18     =   0.0000e+00                
+ +  dcjgate_n_bpw_18=   0.0000e+00  
+
+ *3.3v nmos 
+ +dtox_n_33     = 0 	dlint_n_33    = 0 	dwint_n_33     = 0 
+ +dvth0_n_33    = 0      dcgdo_n_33    = 0       dcgso_n_33     = 0
+
+
+ *3.3v pmos
+ +dtox_p_33     = 0     	dlint_p_33    = 0     	dwint_p_33     = 0 
+ +dvth0_p_33    = 0	dcgdo_p_33    = 0       dcgso_p_33     = 0
+
+ *3.3v nmos deep_nwell
+ +dtox_n_bpw_33     = 0  dlint_n_bpw_33    = 0  	dwint_n_bpw_33     = 0 
+ +dvth0_n_bpw_33    = 0  dcgdo_n_bpw_33    = 0   dcgso_n_bpw_33     = 0
+
+ *1.8v low vth nmos
+ +dtox_n_lv_18     = 0 	dlint_n_lv_18    = 0 	dwint_n_lv_18     = 0 
+ +dvth0_n_lv_18    = 0   dcgdo_n_lv_18    = 0    dcgso_n_lv_18     = 0
+
+ *1.8v low vth pmos
+ +dtox_p_lv_18     = 0 	dlint_p_lv_18    = 0 	dwint_p_lv_18     = 0 
+ +dvth0_p_lv_18    = 0   dcgdo_p_lv_18    = 0    dcgso_p_lv_18     = 0
+
+ *3.3v low vth nmos
+ +dtox_n_lv_33     = 0 	dlint_n_lv_33    = 0 	dwint_n_lv_33     = 0 
+ +dvth0_n_lv_33    = 0   dcgdo_n_lv_33    = 0    dcgso_n_lv_33     = 0
+
+ *3.3v low vth pmos
+ +dtox_p_lv_33     = 0 	dlint_p_lv_33    = 0 	dwint_p_lv_33     = 0 
+ +dvth0_p_lv_33    = 0   dcgdo_p_lv_33    = 0    dcgso_p_lv_33     = 0
+
+ *1.8v zero vt nmos 
+ +dtox_n_zero_18  = 0   	dlint_n_zero_18  = 0   	dwint_n_zero_18 = 0
+ +dvth0_n_zero_18 = 0   	dcgdo_n_zero_18  = 0  	dcgso_n_zero_18 = 0
+
+ *3.3v zero vt nmos 
+ +dtox_n_zero_33  = 0   	dlint_n_zero_33  = 0   	dwint_n_zero_33 = 0
+ +dvth0_n_zero_33 = 0   	dcgdo_n_zero_33  = 0  	dcgso_n_zero_33 = 0
+
+ +  drend_rnnpo    =   0.0000e+00                 
+ +  drs_rnnpo      =   0.0000e+00                 
+ +  ddw_rnnpo      =   0.0000e+00                       
+ +  drend_rnppo    =   0.0000e+00                 
+ +  drs_rnppo      =   0.0000e+00                 
+ +  ddw_rnppo      =   0.0000e+00                 
+ +  drend_rnhr1000 =   0.0000e+00                 
+ +  drs_rnhr1000   =   0.0000e+00                 
+ +  ddw_rnhr1000   =   0.0000e+00  
+
+ .lib 'c:\synopsys\lib\cic018.l' mos_18 
+
+ *.lib './mm180_reg18_v121.lib' tt
+ .model n_18 nmos
+ *****model selectors/controllers*********************************
+ +  level     =   4.9000e+01                          version   =   3.2000e+00  
+ +  binunit   =   1.0000e+00                          mobmod    =   1.0000e+00                           
+ +  capmod    =   2.0000e+00                          nqsmod    =   0.0000e+00                        
+ +  noimod    =   1.0000e+00 
+
+ *****process parameters******************************************
+ +  tox       =  '4.2000e-09+dtox_n_18'            toxm      =   4.2000e-09                        
+ +  xj        =   1.6000e-07                          nch       =   3.7446e+17                        
+ +  rsh       =   8.0000e+00                          ngate     =   1.0000e+23
+
+
+ *****basic model parameters**************************************
+ +  vth0      =  '3.0750e-01+dvth0_n_18'           k1        =   4.5780e-01                     
+ +  k2        =  -2.6380e-02                          k3        =  -1.0880e+01                        
+ +  k3b       =   2.3790e-01                          w0        =  -8.8130e-08                        
+ +  nlx       =   4.2790e-07                          dvt0      =   4.0420e-01                        
+ +  dvt1      =   3.2370e-01                          dvt2      =  -8.6020e-01                        
+ +  dvt0w     =   3.8300e-01                          dvt1w     =   6.0000e+05                        
+ +  dvt2w     =  -2.5000e-02                          lint      =   1.5870e-08                        
+ +  wint      =   1.0220e-08                          dwg       =  -3.3960e-09                        
+ +  dwb       =   1.3460e-09                          u0        =  '3.1410e+02+du0_n_18'                       
+ +  ua        =  -9.2010e-10                          ub        =   1.9070e-18
+ +  uc        =   4.3550e-11                          vsat      =   7.1580e+04 
+ +  a0        =   1.9300e+00                          ags       =   5.0720e-01                        
+ +  b0        =   1.4860e-06                          b1        =   9.0640e-06                        
+ +  keta      =   1.7520e-02                          a1        =   0.0000e+00                        
+ +  a2        =   1.0000e+00                          voff      =  -1.0880e-01                        
+ +  nfactor   =   1.0380e+00                          cit       =  -1.5110e-03                        
+ +  cdsc      =   2.1750e-03                          cdscd     =  -5.0000e-04                        
+ +  cdscb     =   8.2410e-04                          eta0      =   1.0040e-03                        
+ +  etab      =  -1.4590e-03                          dsub      =   1.5920e-03                        
+ +  pclm      =   1.0910e+00                          pdiblc1   =   3.0610e-03                        
+ +  pdiblc2   =   1.0000e-06                          pdiblcb   =   0.0000e+00                        
+ +  drout     =   1.5920e-03                          pscbe1    =   4.8660e+08                        
+ +  pscbe2    =   2.8000e-07                          pvag      =  -2.9580e-01                        
+
+
+ *****parameters for asymmetric and bias-dependent rds model******
+ +  rdsw      =   4.9050e+00                          prwg      =   0.0000e+00                        
+ +  prwb      =   0.0000e+00                          wr        =   1.0000e+00
+
+
+ *****impact ionization current model parameters******************
+ +  alpha0    =   0.0000e+00                          alpha1    =   0.0000e+00                        
+ +  beta0     =   3.0000e+01                        
+
+
+ *****gate-induced drain leakage model parameters*****************
+
+
+ *****gate dielectric tunneling current model parameters**********
+
+
+ *****charge and capacitance model parameters*********************
+ +  xpart     =   1.0000e+00                          cgso      =  '2.3500e-10+dcgso_n_18'         
+ +  cgdo      =  '2.3500e-10+dcgdo_n_18'           cgbo      =   0.0000e+00                        
+ +  cgsl      =   0.0000e+00                          cgdl      =   0.0000e+00                        
+ +  ckappa    =   6.0000e-01                          cf        =   1.5330e-10                        
+ +  clc       =   1.0000e-07                          cle       =   6.0000e-01                        
+ +  dlc       =   4.0000e-08                          dwc       =   0.0000e+00                        
+ +  vfbcv     =  -1.0000e+00                          noff      =   1.0000e+00                        
+ +  voffcv    =   0.0000e+00                          acde      =   1.0000e+00                        
+ +  moin      =   1.5000e+01                        
+
+
+ *****high-speed/rf model parameters******************************
+
+
+ *****flicker and thermal noise model parameters******************
+ +  noia      =   1.0000e+20                          noib      =   5.0000e+04                        
+ +  noic      =  -1.4000e-12                          em        =   4.1000e+07                        
+ +  af        =   1.0000e+00                          ef        =   1.0000e+00                        
+ +  kf        =   0.0000e+00                        
+
+
+ *****layout-dependent parasitics model parameters****************
+ +  lmin      =   1.8000e-07                          lmax      =   5.0000e-05
+ +  wmin      =   2.4000e-07                          wmax      =   1.0000e-04
+ +  xl        = '-1.0500e-08+dxl_n_18'             xw        =  '0.0000e-00+dxw_n_18'           
+
+
+ *****asymmetric source/drain junction diode model parameters*****
+ +  js        =   1.0000e-06                          jsw       =   7.0000e-11                        
+ +  cj        =  '1.0300e-03+dcj_n_18'             mj        =   4.4300e-01                        
+ +  pb        =   8.1300e-01                          cjsw      =  '1.3400e-10+dcjsw_n_18'         
+ +  mjsw      =   3.3000e-01                        
+
+
+ *****temperature dependence parameters***************************
+ +  tnom      =   2.5000e+01                          ute       =  -1.2860e+00                        
+ +  kt1       =  -2.2550e-01                          kt1l      =  -4.1750e-09                        
+ +  kt2       =  -2.5270e-02                          ua1       =   2.1530e-09                        
+ +  ub1       =  -2.6730e-18                          uc1       =  -3.8320e-11                        
+ +  at        =   1.4490e+04                          prt       =  -1.0180e+01                        
+ +  xti       =   3.0000e+00                        
+
+
+ *****dw and dl parameters****************************************
+ +  wl        =   0.0000e+00                          wln       =   1.0000e+00                        
+ +  ww        =   7.2620e-16                          wwn       =   1.0000e+00                        
+ +  wwl       =   0.0000e+00                          ll        =  -1.0620e-15                        
+ +  lln       =   1.0000e+00                          lw        =   2.9960e-15                        
+ +  lwn       =   1.0000e+00                          lwl       =   0.0000e+00                        
+ +  llc       =  -6.6400e-15                          lwc       =   0.0000e+00                        
+ +  lwlc      =   0.0000e+00                          wlc       =   0.0000e+00                        
+ +  wwc       =   0.0000e+00                          wwlc      =   0.0000e+00                        
+
+
+ *****range parameters for model application**********************
+
+
+ *****other parameters********************************************
+ +  lvth0     = '-1.0000e-03+dlvth0_n_18'          wvth0     =  '6.027e-02+dwvth0_n_18'
+ +  pvth0     =  '0+dpvth0_n_18'                   lnlx      =  -2.8540e-08 
+ +  wnlx      =   0.0000e+00                          pnlx      =   0.0000e+00
+ +  wua       =  -1.8800e-11                          wu0       =  '5.4000e-01+dwu0_n_18'
+ +  pub       =   3.8000e-20                          pw0       =   1.3000e-09 
+ +  wrdsw     =   0.0000e+00                          weta0     =   0.0000e+00                        
+ +  wetab     =   0.0000e+00                          leta0     =   1.5740e-03                        
+ +  letab     =   0.0000e+00                          peta0     =   0.0000e+00                        
+ +  petab     =   0.0000e+00                          wpclm     =   0.0000e+00                        
+ +  wvoff     =  -4.0780e-04                          lvoff     =  -4.2080e-03                        
+ +  pvoff     =  -3.7880e-04                          wa0       =  -4.7310e-02                        
+ +  la0       =  -4.6670e-01                          pa0       =  -2.6490e-02  
+ +  wags      =   4.2420e-03                          lags      =   3.0280e-01                        
+ +  pags      =   0.0000e+00                          wketa     =   0.0000e+00                        
+ +  lketa     =  -1.9420e-02                          pketa     =   0.0000e+00                        
+ +  wute      =   6.3730e-02                          lute      =   0.0000e+00                        
+ +  pute      =   0.0000e+00                          wvsat     =   5.0660e+03                    
+ +  lvsat     =   0.0000e+00                          pvsat     =  '0.0000e+00+dpvsat_n_18'                        
+ +  lpdiblc2  =  -4.7520e-03                          wat       =   7.0670e+03                        
+ +  wprt      =   0.0000e+00                          acm       =   3.0000e+00                        
+ +  ldif      =   8.0000e-08                          hdif      =   2.6000e-07                        
+ +  n         =   1.0000e+00                          php       =   8.8000e-01                        
+ +  cjgate    =  '5.0000e-10+dcjgate_n_18'         ctp       =   9.1400e-04                        
+ +  ptp       =   9.2400e-04                          cta       =   9.1900e-04                        
+ +  pta       =   1.5800e-03                          elm       =   5.0000e+00                        
+ +  tlevc     =   1.0000e+00                        
+  **warning** (C:\synopsys\lib\cic018.l:493)  model n_18            device geometries will not be checked against the limits set bylmin, lmax, wmin and wmax. To enable this check, add a period(.)to the model name(i.e. enable model selector).
+                         
+                        
+
+ .model n_bpw_18 nmos
+ *****model selectors/controllers*********************************
+ +  level     =   4.9000e+01                          version   =   3.2000e+00  
+ +  binunit   =   1.0000e+00                          mobmod    =   1.0000e+00                           
+ +  capmod    =   2.0000e+00                          nqsmod    =   0.0000e+00                        
+ +  noimod    =   1.0000e+00 
+
+ *****process parameters******************************************
+ +  tox       =  '4.2000e-09+dtox_n_bpw_18'            toxm      =   4.2000e-09                        
+ +  xj        =   1.6000e-07                          nch       =   3.7446e+17                        
+ +  rsh       =   8.0000e+00                          ngate     =   1.0000e+23
+
+
+ *****basic model parameters**************************************
+ +  vth0      =  '3.0750e-01+dvth0_n_bpw_18'           k1        =   4.5780e-01                     
+ +  k2        =  -2.6380e-02                          k3        =  -1.0880e+01                        
+ +  k3b       =   2.3790e-01                          w0        =  -8.8130e-08                        
+ +  nlx       =   4.2790e-07                          dvt0      =   4.0420e-01                        
+ +  dvt1      =   3.2370e-01                          dvt2      =  -8.6020e-01                        
+ +  dvt0w     =   3.8300e-01                          dvt1w     =   6.0000e+05                        
+ +  dvt2w     =  -2.5000e-02                          lint      =   1.5870e-08                        
+ +  wint      =   1.0220e-08                          dwg       =  -3.3960e-09                        
+ +  dwb       =   1.3460e-09                          u0        =  '3.1410e+02+du0_n_bpw_18'                       
+ +  ua        =  -9.2010e-10                          ub        =   1.9070e-18
+ +  uc        =   4.3550e-11                          vsat      =   7.1580e+04 
+ +  a0        =   1.9300e+00                          ags       =   5.0720e-01                        
+ +  b0        =   1.4860e-06                          b1        =   9.0640e-06                        
+ +  keta      =   1.7520e-02                          a1        =   0.0000e+00                        
+ +  a2        =   1.0000e+00                          voff      =  -1.0880e-01                        
+ +  nfactor   =   1.0380e+00                          cit       =  -1.5110e-03                        
+ +  cdsc      =   2.1750e-03                          cdscd     =  -5.0000e-04                        
+ +  cdscb     =   8.2410e-04                          eta0      =   1.0040e-03                        
+ +  etab      =  -1.4590e-03                          dsub      =   1.5920e-03                        
+ +  pclm      =   1.0910e+00                          pdiblc1   =   3.0610e-03                        
+ +  pdiblc2   =   1.0000e-06                          pdiblcb   =   0.0000e+00                        
+ +  drout     =   1.5920e-03                          pscbe1    =   4.8660e+08                        
+ +  pscbe2    =   2.8000e-07                          pvag      =  -2.9580e-01                        
+
+
+ *****parameters for asymmetric and bias-dependent rds model******
+ +  rdsw      =   4.9050e+00                          prwg      =   0.0000e+00                        
+ +  prwb      =   0.0000e+00                          wr        =   1.0000e+00
+
+
+ *****impact ionization current model parameters******************
+ +  alpha0    =   0.0000e+00                          alpha1    =   0.0000e+00                        
+ +  beta0     =   3.0000e+01                        
+
+
+ *****gate-induced drain leakage model parameters*****************
+
+
+ *****gate dielectric tunneling current model parameters**********
+
+
+ *****charge and capacitance model parameters*********************
+ +  xpart     =   1.0000e+00                          cgso      =  '2.3500e-10+dcgso_n_bpw_18'         
+ +  cgdo      =  '2.3500e-10+dcgdo_n_bpw_18'           cgbo      =   0.0000e+00                        
+ +  cgsl      =   0.0000e+00                          cgdl      =   0.0000e+00                        
+ +  ckappa    =   6.0000e-01                          cf        =   1.5330e-10                        
+ +  clc       =   1.0000e-07                          cle       =   6.0000e-01                        
+ +  dlc       =   4.0000e-08                          dwc       =   0.0000e+00                        
+ +  vfbcv     =  -1.0000e+00                          noff      =   1.0000e+00                        
+ +  voffcv    =   0.0000e+00                          acde      =   1.0000e+00                        
+ +  moin      =   1.5000e+01                        
+
+
+ *****high-speed/rf model parameters******************************
+
+
+ *****flicker and thermal noise model parameters******************
+ +  noia      =   1.0000e+20                          noib      =   5.0000e+04                        
+ +  noic      =  -1.4000e-12                          em        =   4.1000e+07                        
+ +  af        =   1.0000e+00                          ef        =   1.0000e+00                        
+ +  kf        =   0.0000e+00                        
+
+
+ *****layout-dependent parasitics model parameters****************
+ +  lmin      =   1.8000e-07                          lmax      =   5.0000e-05
+ +  wmin      =   2.4000e-07                          wmax      =   1.0000e-04
+ +  xl        = '-1.0500e-08+dxl_n_bpw_18'             xw        =  '0.0000e-00+dxw_n_bpw_18'           
+
+
+ *****asymmetric source/drain junction diode model parameters*****
+ +  js        =   1.0000e-06                          jsw       =   7.0000e-11                        
+ +  cj        =  '1.0300e-03+dcj_n_bpw_18'             mj        =   4.4300e-01                        
+ +  pb        =   8.1300e-01                          cjsw      =  '1.3400e-10+dcjsw_n_bpw_18'         
+ +  mjsw      =   3.3000e-01                        
+
+
+ *****temperature dependence parameters***************************
+ +  tnom      =   2.5000e+01                          ute       =  -1.2860e+00                        
+ +  kt1       =  -2.2550e-01                          kt1l      =  -4.1750e-09                        
+ +  kt2       =  -2.5270e-02                          ua1       =   2.1530e-09                        
+ +  ub1       =  -2.6730e-18                          uc1       =  -3.8320e-11                        
+ +  at        =   1.4490e+04                          prt       =  -1.0180e+01                        
+ +  xti       =   3.0000e+00                        
+
+
+ *****dw and dl parameters****************************************
+ +  wl        =   0.0000e+00                          wln       =   1.0000e+00                        
+ +  ww        =   7.2620e-16                          wwn       =   1.0000e+00                        
+ +  wwl       =   0.0000e+00                          ll        =  -1.0620e-15                        
+ +  lln       =   1.0000e+00                          lw        =   2.9960e-15                        
+ +  lwn       =   1.0000e+00                          lwl       =   0.0000e+00                        
+ +  llc       =  -6.6400e-15                          lwc       =   0.0000e+00                        
+ +  lwlc      =   0.0000e+00                          wlc       =   0.0000e+00                        
+ +  wwc       =   0.0000e+00                          wwlc      =   0.0000e+00                        
+
+
+ *****range parameters for model application**********************
+
+
+ *****other parameters********************************************
+ +  lvth0     = '-1.0000e-03+dlvth0_n_bpw_18'          wvth0     =  '6.027e-02+dwvth0_n_bpw_18'
+ +  pvth0     =  '0+dpvth0_n_bpw_18'                   lnlx      =  -2.8540e-08 
+ +  wnlx      =   0.0000e+00                          pnlx      =   0.0000e+00
+ +  wua       =  -1.8800e-11                          wu0       =  '5.4000e-01+dwu0_n_bpw_18'
+ +  pub       =   3.8000e-20                          pw0       =   1.3000e-09 
+ +  wrdsw     =   0.0000e+00                          weta0     =   0.0000e+00                        
+ +  wetab     =   0.0000e+00                          leta0     =   1.5740e-03                        
+ +  letab     =   0.0000e+00                          peta0     =   0.0000e+00                        
+ +  petab     =   0.0000e+00                          wpclm     =   0.0000e+00                        
+ +  wvoff     =  -4.0780e-04                          lvoff     =  -4.2080e-03                        
+ +  pvoff     =  -3.7880e-04                          wa0       =  -4.7310e-02                        
+ +  la0       =  -4.6670e-01                          pa0       =  -2.6490e-02  
+ +  wags      =   4.2420e-03                          lags      =   3.0280e-01                        
+ +  pags      =   0.0000e+00                          wketa     =   0.0000e+00                        
+ +  lketa     =  -1.9420e-02                          pketa     =   0.0000e+00                        
+ +  wute      =   6.3730e-02                          lute      =   0.0000e+00                        
+ +  pute      =   0.0000e+00                          wvsat     =   5.0660e+03                    
+ +  lvsat     =   0.0000e+00                          pvsat     =  '0.0000e+00+dpvsat_n_bpw_18'                        
+ +  lpdiblc2  =  -4.7520e-03                          wat       =   7.0670e+03                        
+ +  wprt      =   0.0000e+00                          acm       =   3.0000e+00                        
+ +  ldif      =   8.0000e-08                          hdif      =   2.6000e-07                        
+ +  n         =   1.0000e+00                          php       =   8.8000e-01                        
+ +  cjgate    =  '5.0000e-10+dcjgate_n_bpw_18'         ctp       =   9.1400e-04                        
+ +  ptp       =   9.2400e-04                          cta       =   9.1900e-04                        
+ +  pta       =   1.5800e-03                          elm       =   5.0000e+00                        
+ +  tlevc     =   1.0000e+00                        
+  **warning** (C:\synopsys\lib\cic018.l:595)   model n_bpw_18 is not used in netlist
+             
+
+
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 1.8v pmos model               *
+ ******************************************************************************************
+
+ .model p_18 pmos
+ *****model selectors/controllers*********************************
+ +  level     =   4.9000e+01                          mobmod    =   3.0000e+00                        
+ +  version   =   3.2000e+00                          capmod    =   2.0000e+00                        
+ +  binunit   =   1.0000e+00                          nqsmod    =   0.0000e+00
+ +  noimod    =   1.0000e+00 
+
+ *****process parameters******************************************
+ +  tox       =  '4.2000e-09+dtox_p_18'               toxm      =   4.2000e-09                        
+ +  xj        =   1.0000e-07                          nch       =   6.1310e+17                        
+ +  ngate     =   1.0000e+23 
+
+ *****basic model parameters**************************************
+ +  vth0      = '-4.5550e-01+dvth0_p_18'              k1        =   5.7040e-01                        
+ +  k2        =   6.9730e-03                          k3        =  -2.8330e+00                        
+ +  k3b       =   1.3260e+00                          w0        =  -1.9430e-07                        
+ +  nlx       =   2.5300e-07                          dvt0      =   4.8850e-01                        
+ +  dvt1      =   7.5780e-02                          dvt2      =   1.2870e-01                        
+ +  dvt0w     =  -1.2610e-01                          dvt1w     =   2.4790e+04                        
+ +  dvt2w     =   6.9150e-01                          lint      =  -1.0410e-08                        
+ +  wint      =  -1.5250e-07                          dwg       =  -1.1510e-07                        
+ +  dwb       =  -1.0390e-07                          u0        =  '1.1450e+02+du0_p_18'  
+ +  ua        =   1.5400e-09                          ub        =   2.6460e-19
+ +  uc        =  -9.5870e-02                          vsat      =   5.3400e+04                                                                                            
+ +  a0        =   1.3500e+00                          ags       =   3.8180e-01                        
+ +  b0        =  -3.0880e-07                          b1        =   0.0000e+00                        
+ +  keta      =   1.0440e-02                          a1        =   0.0000e+00                        
+ +  a2        =   1.0000e+00                          voff      =  -1.0730e-01                                                                    
+ +  nfactor   =   1.5350e-00                          cit       =  -1.0670e-03 
+ +  cdsc      =   7.5780e-04                          cdscd     =  -2.8830e-05                        
+ +  cdscb     =   1.0000e-04                          eta0      =   1.0710e+00                        
+ +  etab      =  -9.2910e-01                          dsub      =   1.9191e+00
+ +  pclm      =   2.6530e+00                          pdiblc1   =   0.0000e+00                        
+ +  pdiblc2   =   5.0000e-06                          pdiblcb   =   0.0000e+00                        
+ +  drout     =   1.4570e+00                          pscbe1    =   4.8660e+08                        
+ +  pscbe2    =   2.8000e-07                          pvag      =   1.1620e+00                        
+
+
+ *****parameters for asymmetric and bias-dependent rds model******
+ +  rdsw      =   7.9210e+02                          prwg      =   0.0000e+00                        
+ +  prwb      =   0.0000e+00                        
+
+
+ *****impact ionization current model parameters******************
+ +  alpha0    =   0.0000e+00                          alpha1    =   0.0000e+00                        
+ +  beta0     =   3.0000e+01                        
+
+
+ *****gate-induced drain leakage model parameters*****************
+
+
+ *****gate dielectric tunneling current model parameters**********
+
+
+ *****charge and capacitance model parameters*********************
+ +  cgdo      =  '2.0540e-10+dcgdo_p_18'              cgbo      =   0.0000e+00                        
+ +  cgso      =  '2.0540e-10+dcgso_p_18'              xpart     =   1.0000e+00                        
+ +  cf        =   1.5330e-10                          dlc       =   7.0100e-08                                                                              
+ +  cgsl      =   0.0000e+00                          cgdl      =   0.0000e+00                        
+ +  ckappa    =   6.0000e-01                                                  
+ +  clc       =   1.0000e-07                          cle       =   6.0000e-01                        
+ +  dwc       =   0.0000e+00                        
+ +  vfbcv     =  -1.0000e+00                          noff      =   1.0000e+00                        
+ +  voffcv    =   0.0000e+00                          acde      =   1.0000e+00                        
+ +  moin      =   1.5000e+01                        
+
+
+ *****high-speed/rf model parameters******************************
+
+
+ *****flicker and thermal noise model parameters******************
+ +  noia      =   1.0000e+20                          noib      =   5.0000e+04                        
+ +  noic      =  -1.4000e-12                          em        =   4.1000e+07                        
+ +  af        =   1.0000e+00                          ef        =   1.0000e+00                        
+ +  kf        =   0.0000e+00                        
+
+
+ *****layout-dependent parasitics model parameters****************
+ +  lmin      =   1.8000e-07                          lmax      =   5.0000e-05
+ +  wmin      =   2.4000e-07                          wmax      =   1.0000e-04
+ +  xl        = '-2.0000e-09+dxl_p_18'                xw        =  '0.0000e+00+dxw_p_18'           
+
+
+ *****asymmetric source/drain junction diode model parameters*****
+ +  js        =   3.0000e-06                          jsw       =   4.1200e-11                        
+ +  cj        =  '1.1400e-03+dcj_p_18'                mj        =   3.9500e-01                        
+ +  pb        =   7.6200e-01                          cjsw      =  '1.7400e-10+dcjsw_p_18'         
+ +  mjsw      =   3.2400e-01                        
+
+
+ *****temperature dependence parameters***************************
+ +  tnom      =   2.5000e+01                          ute       =  -4.4840e-01                        
+ +  kt1       =  -2.1940e-01                          kt1l      =  -8.2040e-09                        
+ +  kt2       =  -9.4870e-03                          ua1       =   4.5710e-09                        
+ +  ub1       =  -6.0260e-18                          uc1       =  -9.8500e-02                        
+ +  at        =   1.2030e+04                          prt       =   0.0000e+00                        
+ +  xti       =   3.0000e+00                        
+
+
+ *****dw and dl parameters****************************************
+ +  ww        =   1.2360e-14                          lw        =  -2.8730e-16                        
+ +  ll        =   6.6350e-15                        
+ +  wl        =   0.0000e+00                          wln       =   1.0000e+00                        
+ +  wwn       =   1.0000e+00                        
+ +  wwl       =   0.0000e+00                                                 
+ +  lln       =   1.0000e+00                                                
+ +  lwn       =   1.0000e+00                          lwl       =   0.0000e+00                        
+ +  llc       =  -1.3100e-14                          lwc       =   0.0000e+00                        
+ +  lwlc      =   0.0000e+00                          wlc       =   0.0000e+00                        
+ +  wwc       =   0.0000e+00                          wwlc      =   0.0000e+00                        
+
+
+
+ *****range parameters for model application**********************
+
+
+ *****other parameters********************************************
+ +  lvth0     =  '4.4000e-03+dlvth0_p_18'             wvth0     = '-1.4800e-02+dwvth0_p_18'                        
+ +  pvth0     =  '3.2000e-03+dpvth0_p_18'             lnlx      =  -1.5840e-08 
+ +  wrdsw     =   1.0070e+01                          weta0     =   0.0000e+00                        
+ +  wetab     =   0.0000e+00                          wpclm     =   0.0000e+00                        
+ +  wua       =   2.6300e-09                          lua       =  -8.1530e-11
+ +  pua       =   5.8550e-11                          wub       =   0.0000e+00                        
+ +  lub       =   0.0000e+00                          pub       =   0.0000e+00                        
+ +  wuc       =   0.0000e+00                          luc       =   0.0000e+00                        
+ +  puc       =   0.0000e+00                          wvoff     =  -9.8160e-03                        
+ +  lvoff     =  -9.8710e-04                          pvoff     =  -9.8330e-05                        
+ +  wa0       =  -4.8070e-02                          la0       =  -2.8100e-01
+ +  pa0       =   8.6610e-02                          wags      =  -4.1770e-02                        
+ +  lags      =   4.4540e-02                          pags      =  -4.0760e-02                        
+ +  wketa     =   0.0000e+00                          lketa     =  -1.2000e-02
+ +  pketa     =   0.0000e+00                          wute      =  -2.6820e-01                        
+ +  lute      =   0.0000e+00                          pute      =   0.0000e+00                        
+ +  wvsat     =  -1.4200e+04                          lvsat     =   0.0000e+00                        
+ +  pvsat     = '-4.3400e+02+dpvsat_p_18'             lpdiblc2  =   3.0120e-03
+ +  wat       =  -6.4050e+03                          wprt      =   2.1660e+02                        
+ +  n         =   1.0000e+00                          php       =   6.6500e-01                        
+ +  cta       =   1.0000e-03                          ctp       =   7.5300e-04                        
+ +  pta       =   1.5500e-03                          ptp       =   1.2400e-03                        
+ +  acm       =   3.0000e+00                          ldif      =   8.0000e-08             
+ +  rsh       =   8.0000e+00                          rd        =   0.0000e+00                    
+ +  rsc       =   0.0000e+00                          rdc       =   0.0000e+00
+ +  hdif      =   2.6000e-07                          rs        =   0.0000e+00
+  **warning** (C:\synopsys\lib\cic018.l:783)  model p_18            device geometries will not be checked against the limits set bylmin, lmax, wmin and wmax. To enable this check, add a period(.)to the model name(i.e. enable model selector).
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 3.3v nmos model               *
+ ******************************************************************************************
+ .model n_33 nmos
+ +level    = 49                  
+ *
+ * general parameters
+ *
+ +lmin     = 3.4e-7              lmax     = 5.0e-5              wmin     = 2.4e-7              
+ +wmax     = 1.0e-4              tnom     = 27.0                version  = 3.1                 
+ +tox      = '7.00e-09+dtox_n_33'            xj       = 2.5000000e-07       
+ +nch      = 1.6999999e+17       lln      = 1.0000000           lwn      = 1.0000000           
+ +wln      = 1.0000000           wwn      = 1.0000000           lint     = '0.00+dlint_n_33'                
+ +ll       = 1.2142200e-14       lw       = 0.00                lwl      = -2.8856721e-22      
+ +wint     = '0.00+dwint_n_33'                wl       = 0.00                ww       = -2.0097143e-16      
+ +wwl      = -1.5017800e-21      mobmod   = 1                   binunit  = 2                   
+ +xl       = 2.20e-08            xw       = 0.00                dwg      = 3.5527140e-15       
+ +dwb      = 6.2000000e-09       
+ * diode parameters
+ +acm      = 3                   ldif     = 0.00                hdif     = 3.20e-7                
+ +rsh      = 8                                     
+ *
+ * threshold voltage parameters
+ *
+ +vth0     = '0.5924070+dvth0_n_33'           k1       = 0.7137536           k2       = -2.5826899e-02      
+ +k3       = 62.0000000          dvt0     = 4.7501960           dvt1     = 0.6340203           
+ +dvt2     = -0.1139230          dvt0w    = 0.1500000           dvt1w    = 5.9500000e+05       
+ +dvt2w    = 0.00                nlx      = 1.2508283e-07       w0       = 5.6800000e-06       
+ +k3b      = 32.0000000           
+ *
+ * mobility parameters
+ *
+ +vsat     = 9.8280000e+04       ua       = -5.8546880e-10      ub       = 1.6518923e-18       
+ +uc       = 5.5177280e-11       rdsw     = 5.9591060e+02       prwb     = 5.7154760e-02       
+ +prwg     = 2.3068622e-02       wr       = 1.0000000           u0       = 3.4129650e-02       
+ +a0       = 1.2752739           keta     = 5.0000000e-03       a1       = 1.0000000e-02       
+ +a2       = 0.9900000           ags      = 0.2678509           b0       = 1.0000000e-08       
+ +b1       = 9.0000000e-07       
+ *
+ * subthreshold current parameters
+ *
+ +voff     = -0.1360862          nfactor  = 1.0000000           cit      = 0.00                
+ +cdsc     = 2.3999999e-04       cdscb    = 0.00                cdscd    = 2.3999999e-04       
+ +eta0     = 0.1080775           etab     = -1.5000000e-03      dsub     = 0.5210000           
+ *
+ * rout parameters
+ *
+ +pclm     = 0.6318000           pdiblc1  = 9.4999000e-04       pdiblc2  = 1.0000000e-03       
+ +pdiblcb  = 0.00                drout    = 0.5600000           pscbe1   = 4.2400000e+08       
+ +pscbe2   = 1.0000000e-05       pvag     = 0.00                delta    = 1.0000000e-02       
+ +alpha0   = 0.00                alpha1   = 0.00                beta0    = 30.0000000          
+ *
+ * temperature effects parameters
+ *
+ +kt1      = -0.3166082          kt2      = -4.4608160e-02      at       = 5.0000000e+02       
+ +ute      = -1.6006135          ua1      = 4.2028770e-11       ub1      = 3.8000000e-19       
+ +uc1      = 2.8000000e-11       kt1l     = 0.0000000           prt      = -2.7126447e+02      
+ *	
+ * capacitance parameters
+ *
+ +cj       = 7.673167e-04   	mj       = 0.3299333      	pb       = 0.7131242      	
+ +cjsw     = 1.088665e-10   	mjsw     = 0.1036705      	php      = 0.4347057      	
+ +cta      = 1.081522e-03   	ctp      = 7.482284e-04   	pta      = 1.822417e-03   	
+ +ptp      = 2.008567e-03   	js       = 1.00e-05       	jsw      = 5.1e-11           	
+ +cgdo     = '2.7e-10+dcgdo_n_33'        	
+ +cgso     = '2.7e-10+dcgso_n_33'        	cgbo     = 1.0e-10       	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.392e-10          	cjgate   = 2.9e-10              tlevc    = 1
+  **warning** (C:\synopsys\lib\cic018.l:890)   model n_33 is not used in netlist
+
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode triple-well technology, 3.3v nmos model               *
+ ******************************************************************************************
+ .model n_bpw_33 nmos
+ +level    = 49                  
+ *
+ * general parameters
+ *
+ +lmin     = 3.4e-7              lmax     = 5.0e-5              wmin     = 2.4e-7              
+ +wmax     = 1.0e-4              tnom     = 27.0                version  = 3.1                 
+ +tox      = '7.00e-09+dtox_n_bpw_33'            xj       = 2.5000000e-07       
+ +nch      = 1.6999999e+17       lln      = 1.0000000           lwn      = 1.0000000           
+ +wln      = 1.0000000           wwn      = 1.0000000           lint     = '0.00+dlint_n_bpw_33'                
+ +ll       = 1.2142200e-14       lw       = 0.00                lwl      = -2.8856721e-22      
+ +wint     = '0.00+dwint_n_bpw_33'                wl       = 0.00                ww       = -2.0097143e-16      
+ +wwl      = -1.5017800e-21      mobmod   = 1                   binunit  = 2                   
+ +xl       = 2.20e-08            xw       = 0.00                dwg      = 3.5527140e-15       
+ +dwb      = 6.2000000e-09       
+ * diode parameters
+ +acm      = 3                   ldif     = 0.00                hdif     = 3.20e-7                
+ +rsh      = 8                                     
+ *
+ * threshold voltage parameters
+ *
+ +vth0     = '0.5924070+dvth0_n_bpw_33'           k1       = 0.7137536           k2       = -2.5826899e-02      
+ +k3       = 62.0000000          dvt0     = 4.7501960           dvt1     = 0.6340203           
+ +dvt2     = -0.1139230          dvt0w    = 0.1500000           dvt1w    = 5.9500000e+05       
+ +dvt2w    = 0.00                nlx      = 1.2508283e-07       w0       = 5.6800000e-06       
+ +k3b      = 32.0000000           
+ *
+ * mobility parameters
+ *
+ +vsat     = 9.8280000e+04       ua       = -5.8546880e-10      ub       = 1.6518923e-18       
+ +uc       = 5.5177280e-11       rdsw     = 5.9591060e+02       prwb     = 5.7154760e-02       
+ +prwg     = 2.3068622e-02       wr       = 1.0000000           u0       = 3.4129650e-02       
+ +a0       = 1.2752739           keta     = 5.0000000e-03       a1       = 1.0000000e-02       
+ +a2       = 0.9900000           ags      = 0.2678509           b0       = 1.0000000e-08       
+ +b1       = 9.0000000e-07       
+ *
+ * subthreshold current parameters
+ *
+ +voff     = -0.1360862          nfactor  = 1.0000000           cit      = 0.00                
+ +cdsc     = 2.3999999e-04       cdscb    = 0.00                cdscd    = 2.3999999e-04       
+ +eta0     = 0.1080775           etab     = -1.5000000e-03      dsub     = 0.5210000           
+ *
+ * rout parameters
+ *
+ +pclm     = 0.6318000           pdiblc1  = 9.4999000e-04       pdiblc2  = 1.0000000e-03       
+ +pdiblcb  = 0.00                drout    = 0.5600000           pscbe1   = 4.2400000e+08       
+ +pscbe2   = 1.0000000e-05       pvag     = 0.00                delta    = 1.0000000e-02       
+ +alpha0   = 0.00                alpha1   = 0.00                beta0    = 30.0000000          
+ *
+ * temperature effects parameters
+ *
+ +kt1      = -0.3166082          kt2      = -4.4608160e-02      at       = 5.0000000e+02       
+ +ute      = -1.6006135          ua1      = 4.2028770e-11       ub1      = 3.8000000e-19       
+ +uc1      = 2.8000000e-11       kt1l     = 0.0000000           prt      = -2.7126447e+02      
+ *	
+ * capacitance parameters
+ *
+ +cj       = 7.673167e-04   	mj       = 0.3299333      	pb       = 0.7131242      	
+ +cjsw     = 1.088665e-10   	mjsw     = 0.1036705      	php      = 0.4347057      	
+ +cta      = 1.081522e-03   	ctp      = 7.482284e-04   	pta      = 1.822417e-03   	
+ +ptp      = 2.008567e-03   	js       = 1.00e-05       	jsw      = 5.1e-11           	
+ +cgdo     = '2.7e-10+dcgdo_n_bpw_33'        	
+ +cgso     = '2.7e-10+dcgso_n_bpw_33'        	cgbo     = 1.0e-10       	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.392e-10          	cjgate   = 2.9e-10              tlevc    = 1
+  **warning** (C:\synopsys\lib\cic018.l:960)   model n_bpw_33 is not used in netlist
+            	
+
+
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 3.3v pmos model               *
+ ******************************************************************************************
+ .model p_33 pmos
+ +level    = 49             	
+ +lmin     = 3.4e-7         	lmax     = 5.0e-5         	wmin     = 2.4e-7         	
+ +wmax     = 1.0e-4        	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '7.00000e-09+dtox_p_33'    	xj       = 1.8000000e-07  	nch      = 4.3096250e+17  	
+ +lln      = 1.4787377      	lwn      = 1.0000000      	wln      = 1.0000000      	
+ +wwn      = 1.6332974      	lint     = '2.2396316e-08+dlint_p_33'  	ll       = 3.3436880e-18  	
+ +lw       = 0.00           	lwl      = -1.4344100e-24 	wint     = '3.3613110e-08+dwint_p_33'  	
+ +wl       = 0.00           	ww       = -7.2735800e-19 	wwl      = 9.7470860e-26  	
+ +mobmod   = 1              	xl       = -1.0000e-08          xw       = 0                	
+ +dwg      = -1.4371156e-08 	dwb      = 5.9839220e-09  	
+ +vth0     = '-0.7204355+dvth0_p_33'     	k1       = 0.7667419      	k2       = 5.4286610e-02  	
+ +k3       = 2.0892601      	dvt0     = 7.3947320      	dvt1     = 0.9634880      	
+ +dvt2     = 7.8053260e-03  	dvt0w    = 1.7969700      	dvt1w    = 2.8762723e+06  	
+ +dvt2w    = 0.1026245      	nlx      = 0.00           	w0       = 2.1247300e-07  	
+ +k3b      = 1.0028400      	         	
+ +vsat     = 1.0007731e+05  	ua       = -3.9782800e-10 	ub       = 1.6947495e-18  	
+ +uc       = -3.6494700e-11 	rdsw     = 6.1701920e+02  	prwb     = -0.7725255     	
+ +prwg     = 3.3490300e-02  	wr       = 0.9913232      	u0       = 8.0758510e-03  	
+ +a0       = 1.0736154      	keta     = -1.0346900e-02 	a1       = 0.01      	
+ +a2       = 0.9212255      	ags      = 0.1138427      	b0       = 4.3581280e-07  	
+ +b1       = 1.7378807e-06  	
+ +voff     = -0.1239050     	nfactor  = 0.9964148      	cit      = 5.3336740e-04  	
+ +cdsc     = 3.1656700e-03  	cdscb    = 2.4630399e-03  	cdscd    = 0.00           	
+ +eta0     = 5.4210600e-02  	etab     = -1.8931806e-02 	dsub     = 0.4594282      	
+ +pclm     = 0.6164396      	pdiblc1  = 1.1236120e-02  	pdiblc2  = 3.5433970e-04  	
+ +pdiblcb  = 0.1477877      	drout    = 0.1401412      	pscbe1   = 4.6427620e+08  	
+ +pscbe2   = 2.8700000e-05  	pvag     = -0.1307000     	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.3345865     	kt2      = -5.7475180e-02 	at       = 4.9500000e+04  	
+ +ute      = -1.1277215     	ua1      = 1.4019034e-09  	ub1      = -3.4171990e-18 	
+ +uc1      = -1.3930956e-10 	kt1l     = 1.0000003e-08  	prt      = 0.00           	
+ +cj       = 1.199812e-03   	mj       = 0.4096944      	pb       = 0.761753       	
+ +cjsw     = 2.243239e-10   	mjsw     = 0.474468       	php      = 0.9296629      	
+ +cta      = 9.968635e-04   	ctp      = 7.11932e-04    	pta      = 1.503527e-03   	
+ +ptp      = 1.215858e-03   	js       = 9.00e-05       	jsw      = 4.90e-12     	
+ +cgdo     = '2.6e-10+dcgdo_p_33'        	
+ +cgso     = '2.6e-10+dcgso_p_33'        	cgbo     = 1e-10             	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.392e-10       	tlevc    = 1
+ +acm      = 3                 hdif     = 3.2e-7                rsh     = 8               	 
+  **warning** (C:\synopsys\lib\cic018.l:1032)   model p_33 is not used in netlist
+            	
+
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 1.8v low vt nmos model     *
+ ******************************************************************************************
+ .model n_lv_18 nmos
+ +level    = 49             	
+ +lmin     = 2.5e-7         	lmax     = 5.0e-5         	wmin     = 2.5e-7         	
+ +wmax     = 1.0e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '4.20000e-09+dtox_n_lv_18'    	xj       = 1.6000000e-07  	nch      = 4.6371000e+17  	
+ +lln      = 2.0000000      	lwn      = 1.0000000      	wln      = 1.0000000      	
+ +wwn      = 1.0000000      	lint     = '1.0000000e-08+dtox_n_lv_18'  	ll       = -2.5800000e-22 	
+ +lw       = 0.00           	lwl      = 0.00           	wint     = '2.0000000e-08+dtox_n_lv_18'  	
+ +wl       = 0.00           	ww       = 0.00           	wwl      = 0.00           	
+ +mobmod   = 2              	binunit  = 2              	xl       = 0              	
+ +xw       = 0              	
+ +dwg      = 2.5000000e-09  	dwb      = 1.2441700e-09  	
+ +acm      = 3              	hdif     = 2.6e-07             	rsh      = 8              	
+ +vth0     = '1.6460000e-02+dtox_n_lv_18'  	k1       = 0.3122200      	k2       = -4.3434400e-02 	
+ +k3       = -15.4245000    	dvt0     = 1.9600000      	dvt1     = 0.2703380      	
+ +dvt2     = 7.0000000e-02  	dvt0w    = 0.4113980      	dvt1w    = 1.6626000e+06  	
+ +dvt2w    = -4.4234600e-02 	nlx      = 8.3200000e-07  	w0       = 1.0000000e-06  	
+ +k3b      = -0.1101380     	           	
+ +vsat     = 9.20e+04    	pvsat    = 1.9999999e-09  	ua       = 5.2358400e-10  	
+ +wua      = 1.0000000e-16  	pua      = -7.5000000e-23 	ub       = 1.4080000e-18  	
+ +wub      = -3.0000001e-25 	pub      = 8.0000000e-32  	uc       = -1.0246000e-10 	
+ +rdsw     = 96.7580000     	prwb     = -0.2000000     	prwg     = 5.0000000e-02  	
+ +wr       = 1.0000000      	u0       = 4.9234500e-02  	wu0      = 2.4000000e-09  	
+ +pu0      = 2.0000000e-16  	a0       = 1.0000000      	keta     = 4.1062700e-03  	
+ +a1       = 0.00           	a2       = 1.0000000      	ags      = 0.6300000      	
+ +b0       = 0.00           	b1       = 0.00           	
+ +voff     = -0.2517590     	nfactor  = 1.0000000      	cit      = -4.5359940e-03 	
+ +cdsc     = 1.1000000e-03  	cdscb    = 0.00           	cdscd    = 5e-4           	
+ +eta0     = 5.5334000e-02  	etab     = -2.3552900e-02 	dsub     = 0.5600000      	
+ +pclm     = 2.8151700      	pdiblc1  = 0.1000000      	pdiblc2  = 8.0000000e-02  	
+ +pdiblcb  = 0.2777778      	drout    = 1.0000000      	pscbe1   = 6.6815310e+08  	
+ +pscbe2   = 1.0000000e-10  	pvag     = 0.5000000      	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.1999444     	kt2      = 1.5900001e-02  	at       = 3.3000000e+04  	
+ +ute      = -1.6873263     	ua1      = -1.3554663e-09 	ub1      = 8.7998690e-20  	
+ +uc1      = 3.4078270e-11  	kt1l     = 0.00           	prt      = -1.0000000e+02 	
+ +cj       = 0.00099        	mj       = 0.5            	pb       = 0.762          	
+ +cjsw     = 1.5e-10        	mjsw     = 0.257          	php      = 0.639          	
+ +cta      = 0.000902       	ctp      = 0.000718       	pta      = 0.000872       	
+ +ptp      = 0.00385        	js       = 1.00e-04       	jsw      = 0.00           	
+ +cjgate    = 2.4e-10        	        	
+ +cgdo     = '2.0e-10+dcgdo_n_lv_18'        	
+ +cgso     = '2.0e-10+dcgso_n_lv_18'        	cgbo     = 0.0          	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.53e-10       	
+ +dwc      = 2e-08          	tlevc    = 1 
+  **warning** (C:\synopsys\lib\cic018.l:1079)   model n_lv_18 is not used in netlist
+
+
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 1.8v low vt pmos model     *
+ ******************************************************************************************            	
+
+ .model p_lv_18 pmos
+ +level    = 49             	
+ +lmin     = 2.5e-7         	lmax     = 5.0e-5        	wmin     = 2.5e-7         	
+ +wmax     = 1.0e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '4.20000e-09+dtox_p_lv_18'    	xj       = 1.8000000e-07  	nch      = 2.6699999e+17  	
+ +lln      = 0.2000000      	lwn      = 1.0000000      	wln      = 0.7966000      	
+ +wwn      = 1.7867000      	lint     = '0.00+dlint_p_lv_18'           	ll       = 8.9200000e-10  	
+ +lw       = -8.0000000e-14 	lwl      = 3.7900000e-15  	wint     = '-4.2700000e-08+dwint_n_zero_18' 	
+ +wl       = 5.6500000e-14  	ww       = 5.7000000e-24  	wwl      = 1.8000000e-25  	
+ +mobmod   = 1              	binunit  = 2              	xl       = 0              	
+ +xw       = 0              	
+ +dwg      = -1.0600000e-08 	dwb      = -1.0100000e-09 	
+ +acm      = 3              	hdif     = 2.6e-07             	rsh      = 8             	
+ +vth0     = '-0.2253000+dvth0_n_zero_18'     	k1       = 0.4604000      	k2       = -1.0000000e-02 	
+ +k3       = -6.3916000     	dvt0     = 1.0400000e-03  	dvt1     = 2.9700000e-02  	
+ +dvt2     = -12.2436000    	dvt0w    = 0.00           	dvt1w    = 0.00           	
+ +dvt2w    = 0.00           	nlx      = 0.00           	w0       = 5.5000000e-07  	
+ +k3b      = 5.2034000      	          	
+ +vsat     = 1.4500000e+05  	ua       = 1.8500000e-09  	ub       = -4.0200000e-19 	
+ +uc       = -1.2800000e-10 	rdsw     = 1.1024300e+02  	prwb     = -2.0000000     	
+ +prwg     = 1.0000000      	wr       = 1.0251000      	u0       = 1.1700000e-02  	
+ +a0       = 1.1075000      	keta     = -9.5500000e-03 	a1       = 0.00           	
+ +a2       = 0.4000000      	ags      = 0.3268000      	b0       = 4.0000000e-08  	
+ +b1       = 0.00           	
+ +voff     = -0.1415000     	nfactor  = 2.0000000      	cit      = -1.4900000e-04 	
+ +cdsc     = 1.4500000e-05  	cdscb    = 0.00           	cdscd    = 3.8500001e-04  	
+ +eta0     = 8.1700000e-03  	etab     = -8.2900000e-02 	dsub     = 0.6936000      	
+ +pclm     = 1.8243001      	pdiblc1  = 0.1000000      	pdiblc2  = 1.6800000e-03  	
+ +pdiblcb  = 0.2383000      	drout    = 0.2853000      	pscbe1   = 6.3000000e+08  	
+ +pscbe2   = 1.0000000e-10  	pvag     = 2.0000000      	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.2842559     	kt2      = -2.7705010e-02 	at       = 3.3000000e+04  	
+ +ute      = -1.4842620     	ua1      = -1.6085620e-09 	ub1      = -6.7403140e-19 	
+ +uc1      = -4.9096290e-11 	kt1l     = 0.00           	prt      = 0.00           	
+ +cj       = 1.060794e-03   	mj       = 0.3802915      	pb       = 0.7619755      	
+ +cjsw     = 2.025533e-10   	mjsw     = 0.2567205      	pbsw      = 0.6391692      	
+ +cta      = 8.437771e-04   	ctp      = 8.053438e-04   	pta      = 1.465745e-03   	
+ +ptp      = 1.857747e-03   	js       = 1.00e-04       	jsw      = 0.00           	
+ +cjgate    = 4.53e-10       	         	
+ +cgdo     = '1.8e-10+dcgdo_n_zero_18'        	
+ +cgso     = '1.8e-10+dcgso_n_zero_18'        	cgbo     = 0.0e+00        	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.53e-10           	
+ +dwc      = -4.27e-08      	tlevc    = 1      
+  **warning** (C:\synopsys\lib\cic018.l:1132)   model p_lv_18 is not used in netlist
+
+  
+
+
+ **.lib './mm180_lvt33_v111.lib' tt
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 3.3v low vt nmos model     *
+ ******************************************************************************************
+ .model n_lv_33 nmos
+ +level    = 49             	
+ +lmin     = 4.5e-7         	lmax     = 5.0e-5         	wmin     = 8.0e-7         	
+ +wmax     = 1.0e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '7.00000e-09+dtox_n_lv_33'    	xj       = 1.6000000e-07  	nch      = 1.0241000e+17  	
+ +lln      = 1.0000000      	lwn      = 1.0000000      	wln      = 1.0000000      	
+ +wwn      = 1.0000000      	lint     = '2.0000000e-08+dlint_n_lv_33'  	ll       = 0.00           	
+ +lw       = 0.00           	lwl      = 0.00           	wint     = '1.1249999e-08+dwint_n_lv_33'  	
+ +wl       = 0.00           	ww       = 0.00           	wwl      = 0.00           	
+ +mobmod   = 1              	xl       = 0              	xw       = 0              	       	
+ +dwg      = -2.0000002e-09 	dwb      = 0.00           	binunit  = 2
+ +vth0     = '0.3143800+dvth0_n_lv_33'      	k1       = 0.4411720      	k2       = -2.5000002e-03 	
+ +k3       = 8.0000000      	wk3      = -1.5000001e-07 	dvt0     = 9.5500000      	
+ +dvt1     = 0.6921755      	dvt2     = -1.9199999e-02 	dvt0w    = 1.4999999      	
+ +dvt1w    = 3.8390000e+06  	dvt2w    = 0.00           	nlx      = 1.0000000e-07  	
+ +w0       = 2.5000000e-07  	k3b      = -2.2000003     	        	
+ +vsat     = 1.4600500e+05  	lvsat    = 1.2000000e-02  	pvsat    = 4.0000000e-09  	
+ +ua       = 7.4999990e-12  	ub       = 1.4716000e-18  	uc       = 4.2900000e-11  	
+ +rdsw     = 3.4000000e+02  	prwb     = 0.1000000      	prwg     = 5.0000000e-02  	
+ +wr       = 0.8800000      	u0       = 4.0670000e-02  	a0       = 1.3379101      	
+ +keta     = -1.9512800e-02 	lketa    = 1.8000000e-08  	a1       = -1.5000000e-02 	
+ +a2       = 0.4950000      	ags      = 0.2799817      	b0       = 0.00           	
+ +b1       = 0.00           	
+ +voff     = -0.1266667     	nfactor  = 1.9196697      	cit      = -8.2513200e-04 	
+ +cdsc     = -5.5000000e-03 	cdscb    = -2.0000001e-03 	cdscd    = -2.3108199e-03 	
+ +eta0     = 9.0787900e-02  	etab     = -1.8052302e-02 	dsub     = 0.4388730      	
+ +pclm     = 2.0320799      	pdiblc1  = 0.1000000      	pdiblc2  = 8.7416200e-04  	
+ +pdiblcb  = 0.1515152      	drout    = 0.5600000      	pscbe1   = 3.1151754e+08  	
+ +pscbe2   = 4.7085900e-07  	pvag     = 1.8000000      	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.1100000     	kt2      = 2.2000000e-02  	at       = 3.3000000e+04  	
+ +ute      = -1.0548464     	ua1      = 2.0172199e-09  	ub1      = -2.1093869e-18 	
+ +uc1      = -6.6587780e-11 	kt1l     = 0.00           	prt      = 0.00           	
+ +cj       = 7.367141e-04   	mj       = 0.336086       	pb       = 0.7201007      	
+ +cjsw     = 1.73106e-10    	mjsw     = 0.2086389      	pbsw     = 0.6102874      	
+ +cta      = 7.477216e-04   	ctp      = 1.326763e-03   	pta      = 1.775738e-03   	
+ +ptp      = 2.355726e-03   	js       = 1.00e-04       	jsw      = 0.00           	
+ +cjgate    = 5.23e-10       	
+ +cgdo     = '3.5e-10+dcgdo_n_lv_33'        	acm      = 3                   hdif     = 3.2e-7    
+ +cgso     = '3.5e-10+dcgso_n_lv_33'     	cgbo     = 0.0          	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1             	
+ +cf       = 1.392e-10          	rsh      = 8      	        tlevc    = 1  
+ +dwc      = 1.125e-08
+  **warning** (C:\synopsys\lib\cic018.l:1184)   model n_lv_33 is not used in netlist
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 3.3v low vt pmos model     *
+ ******************************************************************************************      	           	
+            	
+
+ .model p_lv_33 pmos
+ +level    = 49             	
+ +lmin     = 4.5e-7         	lmax     = 5.0e-5         	wmin     = 8.0e-7         	
+ +wmax     = 1.0e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '7.00000e-09+dtox_p_lv_33'    	xj       = 1.8000000e-07  	nch      = 5.3343000e+16  	
+ +lln      = 0.7216445      	lwn      = 1.0000000      	wln      = 2.0000000      	
+ +wwn      = 0.5480860      	lint     = '8.7500000e-10+dlint_p_lv_33'  	ll       = 1.1489934e-12  	
+ +lw       = -8.0000000e-15 	lwl      = -1.8801899e-20 	wint     = '2.6149999e-08+dwint_p_lv_33'  	
+ +wl       = -3.3356700e-21 	ww       = -3.7684900e-12 	wwl      = 0.00           	
+ +mobmod   = 1              	xl       = 0              	xw       = 0            
+ +dwg      = -1.3888889e-08 	dwb      = 5.6433000e-09  	
+ +vth0     = '-0.4238060+dvth0_p_lv_33'     	k1       = 0.4537740      	k2       = -1.6830200e-02 	
+ +k3       = -2.3458099     	dvt0     = 2.2409160      	dvt1     = 0.7000346      	
+ +dvt2     = 5.1822500e-02  	dvt0w    = -0.6666300     	dvt1w    = 1.7665100e+06  	
+ +dvt2w    = 0.1730700      	nlx      = 1.0942075e-07  	w0       = 0.00           	
+ +k3b      = 0.5537800      	          	
+ +vsat     = 1.2313600e+05  	ua       = 9.3385000e-10  	ub       = 8.7038620e-19  	
+ +uc       = -4.8379430e-11 	rdsw     = 1.1941917e+03  	prwb     = -3.7754260e-02 	
+ +prwg     = -3.0872462e-02 	wr       = 1.1123391      	u0       = 1.1451221e-02  	
+ +a0       = 0.5109490      	keta     = -1.2610002e-02 	a1       = 0.00           	
+ +a2       = 0.4000000      	ags      = 0.1783000      	b0       = 1.8980900e-07  	
+ +b1       = 4.7157910e-07  	
+ +voff     = -0.1006746     	nfactor  = 2.0000000      	cit      = -4.5838980e-04 	
+ +cdsc     = 1.5963858e-03  	cdscb    = 0.00           	cdscd    = 3.3960306e-03  	
+ +eta0     = 4.0173400e-02  	etab     = -2.4490699e-02 	dsub     = 0.8703098      	
+ +pclm     = 1.5312500      	pdiblc1  = 0.1000000      	pdiblc2  = 2.4438500e-03  	
+ +pdiblcb  = 0.1515152      	drout    = 0.5001400      	pscbe1   = 6.2853930e+08  	
+ +pscbe2   = 5.0000000e-05  	pvag     = -0.7000000     	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.3281201     	kt2      = -2.5214884e-02 	at       = 3.3000000e+04  	
+ +ute      = -0.6066882     	ua1      = 5.3900000e-09  	ub1      = -8.5040010e-18 	
+ +uc1      = -1.9939508e-11 	kt1l     = 0.00           	prt      = 0.00           	
+ +cj       = 0.00102        	mj       = 0.336          	pb       = 0.67           	
+ +cjsw     = 1.5e-10        	mjsw     = 0.209          	pbsw     = 0.45           	
+ +cjgate    = 2.8e-10        	        	
+ +cta      = 0.001          	ctp      = 0.0005         	pta      = 0.00142        	
+ +ptp      = 0.00156        	js       = 1.00e-04       	jsw      = 0.00           	
+ +cgdo     = '3.0e-10+dcgdo_p_lv_33'        	acm      = 3                   hdif     = 3.2e-7
+ +cgso     = '3.0e-10+dcgso_p_lv_33'        	cgbo     = 0.0e+00        	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.392e-10           rsh      = 8                    tlevc    = 1       		
+ +dwc      = 2.615e-08 
+  **warning** (C:\synopsys\lib\cic018.l:1233)   model p_lv_33 is not used in netlist
+
+ ******************************************************************************************
+ *    0.18um 1.8v/3.3v mixedmode twin-well technology, 1.8v zero vt nmos model            *
+ ******************************************************************************************
+ .model n_zero_18 nmos
+ +level    = 49             	
+ +lmin     = 3.2e-7         	lmax     = 5.0e-5         	wmin     = 2.5e-7         	
+ +wmax     = 1.0e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '4.20e-09+dtox_n_zero_18'    	xj       = 1.6000000e-07  	nch      = 3.8726000e+16  	
+ +lln      = 0.2660000      	lwn      = 1.0000000      	wln      = 0.5922000      	
+ +wwn      = 0.2000000      	lint     = '0.00+dlint_n_zero_18'           	ll       = 1.8000001e-11  	
+ +lw       = 0.00           	lwl      = 2.7500000e-17  	wint     = '6.71e-08+dwint_n_zero_18'  	
+ +wl       = -2.3600000e-12 	ww       = -3.1100000e-09 	wwl      = -4.9800000e-14 	
+ +mobmod   = 2              	binunit  = 2              	xl       = 0              	
+ +xw       = 0              	     	
+ +dwg      = -4.0064710e-09 	dwb      = -6.4565710e-10 	
+ +acm      = 3           	hdif     = 2.6e-07             	rsh      = 8            	              	
+ +vth0     = '-0.192824+dvth0_n_zero_18'     	k1       = 6.0130880e-02  	k2       = 2.8346960e-02  	
+ +k3       = -1.6878520     	dvt0     = 0.00           	dvt1     = 0.00           	
+ +dvt2     = 0.5000000      	dvt0w    = -4.1279100e-03 	dvt1w    = 1.1608490e+05  	
+ +dvt2w    = 5.2103550e-02  	nlx      = 5.5854040e-06  	w0       = 0.00           	
+ +k3b      = -1.0744520e-03 	          	
+ +vsat     = 1.4120500e+05  	ua       = -4.2000000e-10 	ub       = 1.8938191e-18  	
+ +uc       = -5.2402070e-11 	rdsw     = 99.7997000     	prwb     = 0.1000000      	
+ +prwg     = 0.2000000      	wr       = 0.9784660      	u0       = 3.9795870e-02  	
+ +a0       = 7.6036300      	keta     = -8.1927600e-03 	a1       = 0.00           	
+ +a2       = 0.4950000      	ags      = 0.6100000      	b0       = 2.2348240e-07  	
+ +b1       = 6.9381160e-07  	
+ +voff     = -0.5343230     	nfactor  = 3.8131400      	cit      = -4.6958800e-03 	
+ +cdsc     = 4.0000000e-03  	cdscb    = 1.0000000e-03  	cdscd    = 1.0000000e-03  	
+ +eta0     = 1.8483700e-03  	etab     = 1.9984799e-03  	dsub     = 0.5600000      	
+ +pclm     = 6.0000000      	pdiblc1  = 0.1000000      	pdiblc2  = 0.1000000      	
+ +pdiblcb  = 0.2777780      	drout    = 0.5600000      	pscbe1   = 6.6815310e+08  	
+ +pscbe2   = 1.0000000e-10  	pvag     = 1.5000000      	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.3209906     	kt2      = -9.4299780e-02 	at       = 3.3000000e+04  	
+ +ute      = -0.8586437     	ua1      = 3.4515450e-09  	ub1      = -4.2916300e-18 	
+ +uc1      = -3.2124550e-11 	kt1l     = 0.00           	prt      = -60.0000000    	
+ +cj       = 0.00116        	mj       = 0.4953         	pb       = 0.9040536      	
+ +cjsw     = 1.58e-10       	mjsw     = 0.2248         	php     = 0.7            	
+ +cta      = 0.000908       	ctp      = 0.000714       	pta      = 0.00156        	
+ +ptp      = 0.00122        	js       = 1.00e-04       	jsw      = 0.00           	
+ +cjgate    = 2.88e-10       	          	
+ +cgdo     = '4.0e-10+dcgdo_n_zero_18'        	
+ +cgso     = '4.0e-10+dcgso_n_zero_18'        	cgbo     = 0.0e+00        	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.533e-10        	tlevc    = 1   
+  **warning** (C:\synopsys\lib\cic018.l:1279)   model n_zero_18 is not used in netlist
+
+ ******************************************************************************************
+ *         0.18um 1.8v/3.3v mixedmode twin-well technology, 3.3v zero vt nmos model     *
+ ******************************************************************************************    
+ .model n_zero_33 nmos
+ +level    = 49             	
+ +lmin     = 4.5e-7         	lmax     = 5.05e-5         	wmin     = 8.0e-7         	
+ +wmax     = 1.05e-4         	tnom     = 27.0           	version  = 3.1            	
+ +tox      = '7.50000e-09+dtox_n_zero_33'    	xj       = 1.6000000e-07  	nch      = 2.5024000e+16  	
+ +lln      = 0.2000000      	lwn      = 1.0000000      	wln      = 1.0000000      	
+ +wwn      = 1.0000000      	lint     = '-2.0600000e-08+dlint_n_zero_33' 	ll       = 5.4366300e-09  	
+ +lw       = 2.0000000e-14  	lwl      = 0.00           	wint     = '8.3950000e-08+dwint_n_zero_33'  	
+ +wl       = 0.00           	ww       = -3.5000000e-14 	wwl      = 0.00           	
+ +mobmod   = 2              	binunit  = 2              	xl       = 0              	
+ +xw       = 0              	
+ +dwg      = 0.00           	dwb      = 6.0000000e-09  	
+ +vth0     = '6.2318000e-02+dvth0_n_zero_33'  	k1       = 0.2505087      	k2       = 3.0312719e-02  	
+ +k3       = -3.1163260     	dvt0     = 2.8485200      	dvt1     = 0.9155145      	
+ +dvt2     = -3.6156200e-02 	dvt0w    = -0.5000000     	dvt1w    = 1.0000000e+06  	
+ +dvt2w    = -7.2127000e-02 	nlx      = 8.0000000e-08  	w0       = 0.00           	
+ +k3b      = 1.4614233e-02  	           	
+ +vsat     = 1.1112400e+05  	pvsat    = 3.8005000e-09  	ua       = 6.3300000e-11  	
+ +ub       = 1.7016443e-18  	wub      = -2.5050000e-25 	uc       = -9.7855250e-11 	
+ +rdsw     = 5.6414910e+02  	prwb     = -8.9352830e-03 	prwg     = -1.6772246e-02 	
+ +wr       = 0.9314115      	u0       = 4.3425860e-02  	a0       = 1.5000000      	
+ +keta     = -1.8150601e-02 	lketa    = 1.0005000e-08  	a1       = -8.3286230e-02 	
+ +a2       = 0.9917943      	ags      = 0.3115282      	b0       = 0.00           	
+ +b1       = 0.00           	
+ +voff     = -0.1186260     	nfactor  = 1.0579700      	cit      = -1.1551600e-04 	
+ +cdsc     = 1.3512136e-03  	cdscb    = 0.00           	cdscd    = 0.00           	
+ +eta0     = 2.5119600e-03  	etab     = 0.00           	dsub     = 0.1000000      	
+ +pclm     = 2.6817601      	pdiblc1  = 0.1000000      	pdiblc2  = 1.0000000e-03  	
+ +pdiblcb  = 0.1012542      	drout    = 0.5600000      	pscbe1   = 2.5877456e+08  	
+ +pscbe2   = 1.7413988e-07  	pvag     = 1.5000000      	delta    = 1.0000000e-02  	
+ +alpha0   = 0.00           	beta0    = 30.0000000     	
+ +kt1      = -0.1100000     	kt2      = 2.2000000e-02  	at       = 3.3000000e+04  	
+ +ute      = -0.9198974     	ua1      = 9.9095510e-10  	ub1      = -2.7372970e-18 	
+ +uc1      = -2.2149076e-11 	kt1l     = 0.00           	prt      = 3.0000000e+02  	
+ +cj       = 0.001757       	mj       = 0.329          	pb       = 0.689          	
+ +cjsw     = 1.57e-10       	mjsw     = 0.305          	php     = 1.25           	
+ +cta      = 0.00517        	ctp      = 0.00074        	pta      = -0.00591       	
+ +ptp      = 0.00482        	js       = 1.00e-04       	jsw      = 0.00           	
+ +cgdo     = '1.0e-10+dcgdo_n_zero_33'        	cjgate   = 2.04e-10
+ +cgso     = '1.0e-10+dcgso_n_zero_33'        	cgbo     = 0.0          	capmod   = 2              	
+ +nqsmod   = 0              	elm      = 5              	xpart    = 1              	
+ +cf       = 1.362e-10          	
+ +dwc      = 8.395e-08      	tlevc    = 1             	
+ +acm      = 3                  hdif     = 3.2e-7               rsh      = 8   
+  **warning** (C:\synopsys\lib\cic018.l:1326)   model n_zero_33 is not used in netlist
+
+  
+ .endl mos_18
+ .lib 'c:\synopsys\lib\cic018.l' bjt
+
+ ******************************************************************************************
+ *                  0.18um mixed mode vertical pnp model(emitter area: 25 um2)             *
+ ******************************************************************************************
+ .model pnp_v50x50 pnp
+ +level  = 1                  
+ + is = 5.65e-18 	bf = 1.38 	      	nf = 1.054 
+ + vaf = 788 		ikf = 0.0021 		ise = 1e-20 
+ + ne = 1.049 		br = 0.000135 		nr = 1.02 
+ + var = 55 	      	ikr = 0.0021 		isc = 1.05e-12 
+ + nc = 1.45 		rb = 268 	      	irb = 2.3e-05 
+ + rbm = 59.48 		re = 0.001 	      	rc = 0.12 
+ + tlevc = 1 		xtb = 1.48 	      	eg = 1.17 
+ + xti = 2.38 		trb1 = 0.0038 		cje = 2.85e-14 
+ + vje = 0.762 		mje = 0.405 		cjc = 2.81e-14 
+ + vjc = 0.458 		mjc = 0.75 	          	fc = 0.5
+ + trm1= 0.0035           
+  **warning** (C:\synopsys\lib\cic018.l:1378)   model pnp_v50x50 is not used in netlist
+ *                                                          
+
+
+ ******************************************************************************************
+ *                  0.18um mixed mode vertical pnp model(emitter area: 100 um2)             *
+ ******************************************************************************************
+ .model pnp_v100x100 pnp
+ +level  = 1                  
+ + is = 2.8e-17 	      bf = 1.37 			nf = 1.056 
+ + vaf = 785 		ikf = 0.005 		ise = 1.1e-18 
+ + ne = 1.049 		br = 0.00063 		nr = 1.06 
+ + var = 55 		      ikr = 0.027 		isc = 1.95e-12 
+ + nc = 1.44 		rb = 66.4 		      irb = 1e-06 
+ + rbm = 59.48 		re = 0.001 		      rc = 0.12 
+ + tlevc = 1 		xtb = 1.298 		eg = 1.17 
+ + xti = 1.98 		trb1 = 0.004 		tre1 = 0.001 
+ + cje = 1.14e-13   	vje = 0.762 		mje = 0.395 
+ + cjc = 4.81e-14 	      vjc = 0.458 		mjc = 0.75 
+ + fc = 0.5                    trm1 = 0.004 
+  **warning** (C:\synopsys\lib\cic018.l:1397)   model pnp_v100x100 is not used in netlist
+
+ .endl bjt
+ .lib 'c:\synopsys\lib\cic018.l' diode
+
+ *******************************************************************************************
+ *                          0.18um mixedmode n+/pwell diode model                         *
+ ******************************************************************************************
+ .model dn d
+ + level = 3 		area = 8e-09 		pj = 0.00035 
+ + is = 2.92e-07 	      jsw = 3.33e-13 		n = 1.03 
+ + rs = 4e-08 		ik = 2.35e+04 		ikr = 1230 
+ + bv = 9.22 		ibv = 1e-3		      tref = 27 
+ + tlev = 1 		      eg = 1.2	      	xti = 3.0 
+ + trs = 1e-06 		cj = 0.00119 		mj = 0.515
+ + ctp = 0.000914        tphp      = 0.000924
+ + cta = 0.000919        tpb      = 0.00158 
+ + pb = 0.79 		cjsw = 1.6e-10 		mjsw = 0.381 
+ + php = 0.705           tlevc = 1
+  **warning** (C:\synopsys\lib\cic018.l:1417)   model dn is not used in netlist
+
+ ******************************************************************************************
+ *                          0.18um mixedmode p+/nwell diode model                         *
+ ******************************************************************************************
+ .model dp d
+ + level = 3 		area = 8e-09 		pj = 0.00035 
+ + is = 1.17e-07      	jsw = 2.1e-13 		n = 1.01 
+ + rs = 3.15e-08 	ik = 3.65e+04 		ikr = 1270 
+ + bv = 9.11 		ibv = 1e-3 		tref = 27 
+ + tlev = 1 		      eg = 1.17 		xti = 3 
+ + trs = 0.00049 	      cj = 0.00114 		mj = 0.395
+ + cta  = 0.001              ctp      = 7.53e-04         tpb      = 1.55e-03
+ + tphp  = 1.24e-03 
+ + pb = 0.762 		cjsw = 1.74e-10 	mjsw = 0.324 
+ + php = 0.665           tlevc = 1
+  **warning** (C:\synopsys\lib\cic018.l:1432)   model dp is not used in netlist
+ *
+ .endl diode
+ .lib 'c:\synopsys\lib\cic018.l' res
+
+
+ **************************************************************************************************************** 
+ *             non salicide n+ poly resistor subcircuit netlist for typical case                                * 
+ **************************************************************************************************************** 
+ .subckt rnnpo n2 n1 pw
+ .param rend='17e-6+drend_rnnpo'  rs='113+drs_rnnpo'  dw='-0.097e-6+ddw_rnnpo'  
+ .param vcr1=-0.00376e-6  vcr2=-0.08474e-12  tc1=-1.6e-4  tc2=4.18e-7  temp= 'temper'  wr=1  lr=1
+ .param tcoef = '1.0+tc1*(temp-25.0)+tc2*pow((temp-25.0),2)'  
+ +ca   = 9.0755e-5
+
+ c1 pw n1 'ca*(wr+dw)*lr/2'
+ r1 n2 n1 '((2*rend/(wr+dw))+(rs*lr/(wr+dw)))*(1.0+vcr1*abs(v(n1,n2)/lr)+vcr2*pow(abs(v(n1,n2))/lr,2))*tcoef'
+ c2 pw n2 'ca*(wr+dw)*lr/2'  
+
+ .ends rnnpo
+
+
+ ****************************************************************************************************************  
+ *             non salicide p+ poly resistor subcircuit netlist for typical case                                * 
+ **************************************************************************************************************** 
+ .subckt rnppo n2 n1 nw
+ .param rend='105e-6+drend_rnppo' rs='352+drs_rnppo' dw='-0.046e-6+ddw_rnppo' 
+ .param vcr1=-0.0106e-6   vcr2=-0.105e-12  tc1=-2.84e-4  tc2=3e-7  temp= 'temper'  wr=1  lr=1
+ .param tcoef = '1.0+tc1*(temp-25.0)+tc2*pow((temp-25.0),2)'    
+ +ca   = 9.0755e-5
+
+ c1 n1 nw 'ca*(wr+dw)*lr/2'
+ r1 n2 n1 '((2*rend/(wr+dw))+(rs*lr/(wr+dw)))*(1.0+vcr1*abs(v(n1,n2)/lr)+vcr2*pow(abs(v(n1,n2))/lr,2))*tcoef'
+ c2 n2 nw 'ca*(wr+dw)*lr/2'  
+
+ .ends rnppo
+
+
+ ****************************************************************************************************************  
+ *             non salicide hr poly resistor subcircuit netlist for typical case                                * 
+ **************************************************************************************************************** 
+ .subckt rnhr1000 n2 n1 nw 
+ .param rend='120e-6+drend_rnhr1000' rs='1039+drs_rnhr1000' dw='-0.043e-6+ddw_rnhr1000'
+ .param vcr1=-0.035e-6   vcr2=-0.15e-12  tc1=-8.34e-4  tc2=1.3e-6  temp= 'temper'  wr=1  lr=1
+ .param tcoef = '1.0+tc1*(temp-25.0)+tc2*pow((temp-25.0),2)'    
+ +ca   = 9.0755e-5
+
+ c1 n1 nw 'ca*(wr+dw)*lr/2'
+ r1 n2 n1 '((2*rend/(wr+dw))+(rs*(lr-0.4e-6)/(wr+dw)))*(1.0+vcr1*abs(v(n1,n2)/lr)+vcr2*pow(abs(v(n1,n2))/lr,2))*tcoef'
+ c2 n2 nw 'ca*(wr+dw)*lr/2'
+
+ .ends rnhr1000
+
+ .endl res
+ .lib 'c:\synopsys\lib\cic018.l' cap
+
+ *
+ *     #########################################
+ *     #                                       #
+ *     #  0.18um rfcmos mim_sh hspice model    #
+ *     #                                       #  
+ *     #########################################
+ *
+ .subckt mimcapm 1 2 nx=1 ny=1 l=20e-6 w=20e-6 
+
+ **********************************************
+ .param dt='temper-25'
+ .param leb='ny*(l+1.7e-6)+4.3e-6'        
+ .param wb='nx*(w+1.7e-6)+4.3e-6'
+ .param cn='0.001'
+ .param cox='5.4478e-6'
+ .param n='nx*ny'
+ .param cs='n*(l*w*cn+1.5e-10*(l+w))*(1+3e-5*dt+1e-8*dt*dt)'
+ .param cox1='(leb*wb*cox+3.382e-11*(leb+wb))/2'
+ .param cox2= 'cox1'
+ .param rs='2.0667e-2*leb/wb'
+ .param k='wb/(wb+2*(1e-4-wb/2-3.25e-5))'
+ .param k1='sqrt(1-k*k)'
+ .param f='1/(log(2*(1+sqrt(k1))/(1-sqrt(k1))))'
+ .param ls='1e-7*leb/f*(0.0074*(leb/wb)+0.2399+0.7363/(leb/wb))'
+ * --------- equivalent network -------------------
+ *
+ c 1 11 'cs*(1.0027-0.0002*v(2,1)+3e-5*v(2,1)*v(2,1))'
+ l 11 12 ls
+ r 12 2 rs
+ *c1 11 999 cox1
+ *c2 2 999 cox2
+ *
+ .ends
+ .endl cap
+ .endl  tt
+
+ mp1 s_1 a vdd vdd p_18 l=0.18u w=0.82u
+ mp2 out b s_1 vdd p_18 l=0.18u w=0.82u
+
+ mn1 out a gnd gnd n_18 l=0.18u w=0.18u
+ mn2 out b gnd gnd n_18 l=0.18u w=0.18u
+
+ vdd vdd gnd 1.8v
+ va a gnd pulse(0,1.8,1u,1n,1n,1u,2u)
+ vb b gnd pulse(0,1.8,2u,1n,1n,2u,4u)
+ cl out gnd 1pf
+
+ .option post=2
+ .tran 10n 40u
+
+ ***********************************************************************
+ ** runlvl is invoked, you can disable it by:
+      a) Add option runlvl=0 to your current simulation job.
+      b) Copy $installdir/hspice.ini to your HOME directory and
+         customize it by adding option runlvl=0, which disables
+         it for all of your simulation jobs.
+      c) Re-invoke $installdir/bin/config program and unselect the
+         option runlvl setting in box 'hspice.ini' which disables
+         it for whole group simulation jobs.
+
+ ** runlvl is invoked, some options are ignored or automatically set:
+      Options below are automatically set(user setting will overwrite them):
+      if runlvl=6,            .option bypass=0
+      if runlvl=[1|2|3|4|5],  .option bypass=2
+
+      Options below are ignored, they are replaced by automated algorithms:
+        lvltim    dvdt      ft    fast   trtol  absvar  relvar
+          relq  chgtol    dvtr    imin    itl3    rmax
+
+ ** runlvl is invoked, actual option value used by HSPICE are:
+       runlvl= 3       bypass= 2      mbypass=   2.00   bytol= 100.00u
+ ***********************************************************************
+
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******                   
+ ******  
+ #0.9v_nor2                                                                     
+  ******  mos   model parameters           tnom=  25.000 temp=  25.000          
+ ******  
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18     model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.2            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          2               xpart=          1         
+       mobMod=          1              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=   4.2e-009 meter   
+           xj=   1.6e-007 meter       binflag=          0         
+         lmin=   1.8e-007 meter          lmax=     5e-005 meter   
+         wmin=   2.4e-007 meter          wmax=     0.0001 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint= 1.587e-008 meter          wint= 1.022e-008 meter   
+        lmult=          1               wmult=          1         
+           ll=-1.062e-015                 lln=          1         
+           lw= 2.996e-015                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww= 7.262e-016         
+          wwn=          1                 wwl=          0         
+          dwg=-3.396e-009 m/V             dwb= 1.346e-009 m/V^1/2 
+           a0=       1.93                 ags=     0.5072 V^-1    
+           b0= 1.486e-006 meter            b1= 9.064e-006 meter   
+         keta=    0.01752 V^-1           voff=    -0.1088 V       
+        ngate=     1e+023 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=  1.55e-007 meter   
+         vth0=     0.3075 V               nch=3.7446e+017 cm^-3   
+         nsub=     6e+016 cm^-3           nlx= 4.279e-007 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=     0.4578 V^1/2            k2=   -0.02638         
+           k3=     -10.88                 k3b=     0.2379 V^-1    
+           w0=-8.813e-008 meter          dvt0=     0.4042         
+         dvt1=     0.3237                dvt2=    -0.8602 V^-1    
+        dvt0w=      0.383 meter^-1      dvt1w=     600000 meter^-1
+        dvt2w=     -0.025 V^-1           dsub=   0.001592         
+         eta0=   0.001004                etab=  -0.001459 V^-1    
+           u0=      314.1 cm^2/V/sec         ua=-9.201e-010 m/V     
+           ub= 1.907e-018 (m/V)^2          uc= 4.355e-011 V^-1    
+         vsat=      71580 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=      4.905 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=      1.091             pdiblc1=   0.003061         
+      pdiblc2=     1e-006             pdiblcb=          0 V^-1    
+       pscbe1= 4.866e+008 V/m          pscbe2=   2.8e-007 V/m     
+        drout=   0.001592                pvag=    -0.2958         
+      nfactor=      1.038                cdsc=   0.002175 f/m^2   
+        cdscb=  0.0008241 f/V/m^2       cdscd=    -0.0005 f/V/m^2 
+          cit=  -0.001511 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=     4e-008 meter   
+          dwc=          0 meter           clc=     1e-007 meter   
+          cle=        0.6                cgso=  2.35e-010 f/m     
+         cgdo=  2.35e-010 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf= 1.533e-010 f/m     
+         acde=          1 m/V            moin=         15 V^1/2   
+         toxm=   4.2e-009 m            dtoxcv=          0 m       
+          vfb (not used)                alpha1=          0 1/V     
+         ijth=          0 A              noff=          1         
+       voffcv=          0                 tcj=          0 1/K     
+        tcjsw=          0 1/K          tcjswg=          0 1/K     
+          tpb=          0 V/K           tpbsw=          0 V/K     
+       tpbswg=          0 V/K             llc= -6.64e-015         
+          lwc=          0                lwlc=          0         
+          wlc=          0                 wwc=          0         
+         wwlc=          0                tnom=     298.15 K       
+          kt1=    -0.2255 V              kt1l=-4.175e-009         
+          kt2=   -0.02527                 ute=     -1.286         
+          ua1= 2.153e-009 m/V             ub1=-2.673e-018 (m/V)^2 
+          uc1=-3.832e-011 m/V^2            at=      14490 m/s     
+          prt=     -10.18         
+          using Berkeley noise model       noiMod=          1         
+         noia=     1e+020                noib=      50000         
+         noic=  -1.4e-012                  em=   4.1e+007         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-029         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=  2.6e-007 meter    
+         ldif=    8e-008 meter             js=    1e-006 amp/m^2  
+          jsw=    7e-011 amp/m            xti=         3          
+            n=         1                   cj=   0.00103 f/m^2    
+           mj=     0.443                   pb=     0.813 V        
+         cjsw= 1.34e-010 f/m             mjsw=      0.33          
+          php=      0.88 V               pbsw (not used)           
+       cjgate=    5e-010 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+          la0=    -0.4667                lags=     0.3028         
+        lketa=   -0.01942               lvoff=  -0.004208         
+        lvth0=     -0.001                lnlx=-2.854e-008         
+        leta0=   0.001574            lpdiblc2=  -0.004752         
+          wa0=   -0.04731                wags=   0.004242         
+        wvoff= -0.0004078               wvth0=    0.06027         
+          wu0=       0.54                 wua= -1.88e-011         
+        wvsat=       5066                wute=    0.06373         
+          wat=       7067                 pa0=   -0.02649         
+        pvoff= -0.0003788                 pw0=   1.3e-009         
+          pub=   3.8e-020         
+ ***************************************************************************
+ ***        model parameters  model name:   0:p_18     model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.2            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          2               xpart=          1         
+       mobMod=          3              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=   4.2e-009 meter   
+           xj=     1e-007 meter       binflag=          0         
+         lmin=   1.8e-007 meter          lmax=     5e-005 meter   
+         wmin=   2.4e-007 meter          wmax=     0.0001 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint=-1.041e-008 meter          wint=-1.525e-007 meter   
+        lmult=          1               wmult=          1         
+           ll= 6.635e-015                 lln=          1         
+           lw=-2.873e-016                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww= 1.236e-014         
+          wwn=          1                 wwl=          0         
+          dwg=-1.151e-007 m/V             dwb=-1.039e-007 m/V^1/2 
+           a0=       1.35                 ags=     0.3818 V^-1    
+           b0=-3.088e-007 meter            b1=          0 meter   
+         keta=    0.01044 V^-1           voff=    -0.1073 V       
+        ngate=     1e+023 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=  1.55e-007 meter   
+         vth0=    -0.4555 V               nch= 6.131e+017 cm^-3   
+         nsub=     6e+016 cm^-3           nlx=  2.53e-007 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=     0.5704 V^1/2            k2=   0.006973         
+           k3=     -2.833                 k3b=      1.326 V^-1    
+           w0=-1.943e-007 meter          dvt0=     0.4885         
+         dvt1=    0.07578                dvt2=     0.1287 V^-1    
+        dvt0w=    -0.1261 meter^-1      dvt1w=      24790 meter^-1
+        dvt2w=     0.6915 V^-1           dsub=     1.9191         
+         eta0=      1.071                etab=    -0.9291 V^-1    
+           u0=      114.5 cm^2/V/sec         ua=  1.54e-009 m/V     
+           ub= 2.646e-019 (m/V)^2          uc=   -0.09587 V^-1    
+         vsat=      53400 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=      792.1 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=      2.653             pdiblc1=          0         
+      pdiblc2=     5e-006             pdiblcb=          0 V^-1    
+       pscbe1= 4.866e+008 V/m          pscbe2=   2.8e-007 V/m     
+        drout=      1.457                pvag=      1.162         
+      nfactor=      1.535                cdsc=  0.0007578 f/m^2   
+        cdscb=     0.0001 f/V/m^2       cdscd=-2.883e-005 f/V/m^2 
+          cit=  -0.001067 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=  7.01e-008 meter   
+          dwc=          0 meter           clc=     1e-007 meter   
+          cle=        0.6                cgso= 2.054e-010 f/m     
+         cgdo= 2.054e-010 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf= 1.533e-010 f/m     
+         acde=          1 m/V            moin=         15 V^1/2   
+         toxm=   4.2e-009 m            dtoxcv=          0 m       
+          vfb (not used)                alpha1=          0 1/V     
+         ijth=          0 A              noff=          1         
+       voffcv=          0                 tcj=          0 1/K     
+        tcjsw=          0 1/K          tcjswg=          0 1/K     
+          tpb=          0 V/K           tpbsw=          0 V/K     
+       tpbswg=          0 V/K             llc= -1.31e-014         
+          lwc=          0                lwlc=          0         
+          wlc=          0                 wwc=          0         
+         wwlc=          0                tnom=     298.15 K       
+          kt1=    -0.2194 V              kt1l=-8.204e-009         
+          kt2=  -0.009487                 ute=    -0.4484         
+          ua1= 4.571e-009 m/V             ub1=-6.026e-018 (m/V)^2 
+          uc1=    -0.0985 m/V^2            at=      12030 m/s     
+          prt=          0         
+          using Berkeley noise model       noiMod=          1         
+         noia=     1e+020                noib=      50000         
+         noic=  -1.4e-012                  em=   4.1e+007         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-029         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=  2.6e-007 meter    
+         ldif=    8e-008 meter             js=    3e-006 amp/m^2  
+          jsw= 4.12e-011 amp/m            xti=         3          
+            n=         1                   cj=   0.00114 f/m^2    
+           mj=     0.395                   pb=     0.762 V        
+         cjsw= 1.74e-010 f/m             mjsw=     0.324          
+          php=     0.665 V               pbsw (not used)           
+       cjgate= 1.74e-010 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+          la0=     -0.281                lags=    0.04454         
+        lketa=     -0.012               lvoff= -0.0009871         
+        lvth0=     0.0044                lnlx=-1.584e-008         
+          lua=-8.153e-011            lpdiblc2=   0.003012         
+          wa0=   -0.04807                wags=   -0.04177         
+        wvoff=  -0.009816               wvth0=    -0.0148         
+          wua=  2.63e-009               wvsat=     -14200         
+        wrdsw=      10.07                wute=    -0.2682         
+          wat=      -6405                wprt=      216.6         
+          pa0=    0.08661                pags=   -0.04076         
+        pvoff=-9.833e-005               pvth0=     0.0032         
+          pua= 5.855e-011               pvsat=       -434         
+
+ **warning** dc voltage reset to initial transient source value
+             in source        0:va                  new dc=  0.0000D+00
+
+
+ **warning** dc voltage reset to initial transient source value
+             in source        0:vb                  new dc=  0.0000D+00
+
+ 
+
+ 
+      
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******                   
+ ******  
+ #0.9v_nor2                                                                     
+  ******  operating point information      tnom=  25.000 temp=  25.000          
+ ******  
+ ***** operating point status is voltage   simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   0.      0:b       =   0.      0:out     =   1.8000 
+ +0:s_1     =   1.8000  0:vdd     =   1.8000 
+
+
+          ***** job concluded
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******                   
+ ******  
+ #0.9v_nor2                                                                     
+  ******  job statistics summary           tnom=  25.000 temp=  25.000          
+ ******  
+
+           total memory used        172 kbytes
+
+  # nodes =      14 # elements=       8
+  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       4
+  # va device =       0
+
+    analysis           time    # points   tot. iter  conv.iter
+
+    op point           0.01           1           9
+    transient          0.05        4001        2054         826 rev=        60
+    readin             0.01
+    errchk             0.01
+    setup              0.00
+    output             0.00
+           total cpu time          0.08 seconds
+           total elapsed time         1 seconds
+               job started at  16:37:18 12/05/2019
+               job ended   at  16:37:18 12/05/2019
+
+
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini

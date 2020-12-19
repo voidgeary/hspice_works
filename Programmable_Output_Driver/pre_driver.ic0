@@ -1,0 +1,21 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "14:57:21 12/05/2019 "
+* "netlist" "c:\users\user\desktop\vlsi\programmable_output_driver\pre_driver.sp "
+* "runtitle" "#pre_driver"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ e =   0.            
++ gn =  32.9339n       
++ gp =   1.8000        
++ ie =   1.8000        
++ in =   0.            
++ vdd =   1.8000        
++ x1.s_1 =  64.3013m       
++ x3.s_1 =   1.8000        
+***   END: Saved Operating Point ***                     

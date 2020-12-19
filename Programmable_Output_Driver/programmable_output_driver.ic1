@@ -1,0 +1,49 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "14:53:06 12/19/2019 "
+* "netlist" "c:\users\user\desktop\programmable_output_driver\programmable_output_driver.sp "
+* "runtitle" "#programmable_output_driver"
+* time =    0.            
+* temperature =    0.            
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ e0 =  24.5789n       
++ e1 =   0.            
++ e2 =   1.8000        
++ gn0 =  21.6212n       
++ gn0out =  11.2515n       
++ gn1 =  21.6212n       
++ gn1out =  11.2515n       
++ gn2 =   1.8000        
++ gn2out =   1.8000        
++ gp0 =   1.8000        
++ gp0out =   1.8000        
++ gp1 =   1.8000        
++ gp1out =   1.8000        
++ gp2 =   1.8000        
++ gp2out =   1.8000        
++ in =   0.            
++ out =  85.4292n       
++ s0 =   1.8000        
++ s1 =   0.            
++ vdd =   1.8000        
++ x2.ie =   1.8000        
++ x3.ie =   1.8000        
++ x4.ie =  21.3841n       
++ x5.in1n =   1.8000        
++ x5.in1p =  11.2515n       
++ x6.in1n =   1.8000        
++ x6.in1p =  11.2515n       
++ x7.in1n =  11.2521n       
++ x7.in1p =  11.2517n       
++ x1.x1.s_1 = 395.0766m       
++ x2.x1.s_1 =  63.6822m       
++ x2.x3.s_1 =   1.8000        
++ x3.x1.s_1 =  63.6822m       
++ x3.x3.s_1 =   1.8000        
++ x4.x1.s_1 = 639.5685n       
++ x4.x3.s_1 =   1.8000        
+***   END: Saved Operating Point ***                     

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='A-2008.03 32-BIT'
+.TITLE '#ring_oscillator'
+ pmax             prid             f                temper            
+ alter#            
+  2.178e-04        9.528e-10        1.049e+09         25.0000         
+    1.0000         

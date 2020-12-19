@@ -1,0 +1,49 @@
+pnlAddPane();
+nil
+1
+designOpen("c:\\users\\user\\desktop\\programmable_output_driver\\programmable_output_driver.sp");
+"D0"
+t
+pnlAddCurve(1, node(D0,"A0","v(in)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(out)"), node(D0,"A0","TIME"));
+nil
+pnlAddPane();
+nil
+nil
+2
+pnlAddCurve(2, node(D0,"A2","v(in)"), node(D0,"A2","TIME"));
+nil
+pnlAddCurve(2, node(D0,"A2","v(out)"), node(D0,"A2","TIME"));
+nil
+pnlAddPane();
+nil
+nil
+3
+pnlAddCurve(3, node(D0,"A1","v(in)"), node(D0,"A1","TIME"));
+nil
+pnlAddCurve(3, node(D0,"A1","v(out)"), node(D0,"A1","TIME"));
+nil
+pnlUnselectPane(3, 0);
+nil
+pnlSelectPane(2);
+nil
+pnlUnselectPane(2, 0);
+nil
+pnlSelectPane(1);
+nil
+pnlHidePane(2, 1);
+nil
+pnlHidePane(3, 1);
+nil
+quit();
+exit
+pnlDeletePane(3, 1);
+nil
+nil
+pnlDeletePane(2, 1);
+nil
+nil
+pnlDeletePane(1, 1);
+nil
+nil

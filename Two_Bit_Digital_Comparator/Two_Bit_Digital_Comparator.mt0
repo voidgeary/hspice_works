@@ -1,0 +1,4 @@
+$DATA1 SOURCE='HSPICE' VERSION='A-2008.03 32-BIT'
+.TITLE '#tbdc'
+ pmax             temper           alter#            
+  3.146e-06         27.0000           1.0000         

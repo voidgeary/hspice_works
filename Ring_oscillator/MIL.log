@@ -1,0 +1,13 @@
+pnlAddPane();
+nil
+1
+designOpen("c:\\users\\user\\desktop\\vlsi\\ring_oscillator\\ring_oscillator.sp");
+"D0"
+t
+pnlAddCurve(1, node(D0,"A2","v(out)"), node(D0,"A2","TIME"));
+nil
+quit();
+exit
+pnlDeletePane(1, 1);
+nil
+nil

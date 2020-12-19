@@ -1,0 +1,138 @@
+***** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******
+ Input File: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.sp
+ lic: No 'set LM_LICENSE_FILE' in current environment'
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   user                 HOSTNAME: user-PC
+ lic: HOSTID: b06ebfcbfc4a         PID:      4188
+ lic: Using FLEXlm license file:
+ lic: C:\flexlm\license.dat
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9
+ lic: NODE LOCKED license on hostid b06ebfcbfc4a
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ init: begin read circuit files,  cpu clock=  3.30E-01
+ init: end read circuit files,  cpu clock=  3.40E-01 memory=    151 kb
+ init: begin check errors,  cpu clock=  3.40E-01
+ init: end check errors,  cpu clock=  3.40E-01 memory=    288 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  3.40E-01
+       establish matrix -- done,  cpu clock=  3.40E-01 memory=    306 kb
+       re-order matrix -- done,  cpu clock=  3.40E-01 memory=    314 kb
+ init: end setup matrix,  cpu clock=  3.60E-01 memory=    349 kb
+ dcop: begin dcop,  cpu clock=  3.60E-01
+ dcop: end dcop,  cpu clock=  3.60E-01 memory=    349 kb  tot_iter=      22
+ output: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.mt0
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps=   6 cpu clock=  3.70E-01
+ tran: time= 5.0000E-07 tot_iter=       2 conv_iter=       1 cpu clock= 3.70E-01
+ tran: time= 1.0000E-06 tot_iter=       4 conv_iter=       2 cpu clock= 3.80E-01
+ tran: time= 1.5000E-06 tot_iter=   71146 conv_iter=   19974 cpu clock= 2.73E+00
+ tran: time= 2.0000E-06 tot_iter=  142277 conv_iter=   39941 cpu clock= 5.08E+00
+ tran: time= 2.5000E-06 tot_iter=  213409 conv_iter=   59908 cpu clock= 7.42E+00
+ tran: time= 3.0000E-06 tot_iter=  284540 conv_iter=   79874 cpu clock= 9.77E+00
+ tran: time= 3.5000E-06 tot_iter=  355677 conv_iter=   99842 cpu clock= 1.21E+01
+ tran: time= 4.0000E-06 tot_iter=  426811 conv_iter=  119809 cpu clock= 1.45E+01
+ tran: time= 4.5000E-06 tot_iter=  497940 conv_iter=  139774 cpu clock= 1.68E+01
+ tran: time= 5.0000E-06 tot_iter=  569077 conv_iter=  159743 cpu clock= 1.92E+01
+ sweep: tran tran0    end,  cpu clock=  1.92E+01 memory=    350 kb
+>info:         ***** hspice job concluded
+>alter:
+ init: begin read circuit files,  cpu clock=  1.92E+01
+ init: end read circuit files,  cpu clock=  1.92E+01 memory=    159 kb
+ init: begin check errors,  cpu clock=  1.92E+01
+ init: end check errors,  cpu clock=  1.92E+01 memory=    296 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  1.92E+01
+       establish matrix -- done,  cpu clock=  1.92E+01 memory=    314 kb
+       re-order matrix -- done,  cpu clock=  1.92E+01 memory=    322 kb
+ init: end setup matrix,  cpu clock=  1.92E+01 memory=    357 kb
+ dcop: begin dcop,  cpu clock=  1.92E+01
+ dcop: end dcop,  cpu clock=  1.92E+01 memory=    357 kb  tot_iter=      33
+ output: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.mt1
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps=   6 cpu clock=  1.92E+01
+ tran: time= 5.0000E-07 tot_iter=       2 conv_iter=       1 cpu clock= 1.92E+01
+ tran: time= 1.0000E-06 tot_iter=       4 conv_iter=       2 cpu clock= 1.92E+01
+ tran: time= 1.5000E-06 tot_iter=   84443 conv_iter=   23094 cpu clock= 2.20E+01
+ tran: time= 2.0000E-06 tot_iter=  168880 conv_iter=   46182 cpu clock= 2.48E+01
+ tran: time= 2.5000E-06 tot_iter=  253312 conv_iter=   69269 cpu clock= 2.77E+01
+ tran: time= 3.0000E-06 tot_iter=  337745 conv_iter=   92356 cpu clock= 3.05E+01
+ tran: time= 3.5000E-06 tot_iter=  422181 conv_iter=  115444 cpu clock= 3.33E+01
+ tran: time= 4.0000E-06 tot_iter=  506615 conv_iter=  138532 cpu clock= 3.61E+01
+ tran: time= 4.5000E-06 tot_iter=  591049 conv_iter=  161619 cpu clock= 3.90E+01
+ tran: time= 5.0000E-06 tot_iter=  675485 conv_iter=  184707 cpu clock= 4.18E+01
+ sweep: tran tran0    end,  cpu clock=  4.18E+01 memory=    358 kb
+>info:         ***** hspice job concluded
+>alter:
+ init: begin read circuit files,  cpu clock=  4.18E+01
+ init: end read circuit files,  cpu clock=  4.18E+01 memory=    159 kb
+ init: begin check errors,  cpu clock=  4.18E+01
+ init: end check errors,  cpu clock=  4.18E+01 memory=    427 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  4.18E+01
+       establish matrix -- done,  cpu clock=  4.18E+01 memory=    445 kb
+       re-order matrix -- done,  cpu clock=  4.18E+01 memory=    453 kb
+ init: end setup matrix,  cpu clock=  4.18E+01 memory=    489 kb
+ dcop: begin dcop,  cpu clock=  4.18E+01
+ dcop: end dcop,  cpu clock=  4.18E+01 memory=    489 kb  tot_iter=      35
+ output: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.mt2
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps=   6 cpu clock=  4.18E+01
+ tran: time= 5.0000E-07 tot_iter=       2 conv_iter=       1 cpu clock= 4.18E+01
+ tran: time= 1.0000E-06 tot_iter=       4 conv_iter=       2 cpu clock= 4.18E+01
+ tran: time= 1.5000E-06 tot_iter=   66227 conv_iter=   19251 cpu clock= 4.40E+01
+ tran: time= 2.0000E-06 tot_iter=  132424 conv_iter=   38494 cpu clock= 4.63E+01
+ tran: time= 2.5000E-06 tot_iter=  198619 conv_iter=   57737 cpu clock= 4.85E+01
+ tran: time= 3.0000E-06 tot_iter=  264809 conv_iter=   76978 cpu clock= 5.08E+01
+ tran: time= 3.5000E-06 tot_iter=  331007 conv_iter=   96222 cpu clock= 5.30E+01
+ tran: time= 4.0000E-06 tot_iter=  397190 conv_iter=  115461 cpu clock= 5.53E+01
+ tran: time= 4.5000E-06 tot_iter=  463386 conv_iter=  134704 cpu clock= 5.75E+01
+ tran: time= 5.0000E-06 tot_iter=  529577 conv_iter=  153946 cpu clock= 5.98E+01
+ sweep: tran tran0    end,  cpu clock=  5.98E+01 memory=    489 kb
+>info:         ***** hspice job concluded
+>alter:
+ init: begin read circuit files,  cpu clock=  5.98E+01
+ init: end read circuit files,  cpu clock=  5.98E+01 memory=    290 kb
+ init: begin check errors,  cpu clock=  5.98E+01
+ init: end check errors,  cpu clock=  5.98E+01 memory=    427 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  5.98E+01
+       establish matrix -- done,  cpu clock=  5.98E+01 memory=    445 kb
+       re-order matrix -- done,  cpu clock=  5.98E+01 memory=    453 kb
+ init: end setup matrix,  cpu clock=  5.98E+01 memory=    489 kb
+ dcop: begin dcop,  cpu clock=  5.98E+01
+ dcop: end dcop,  cpu clock=  5.98E+01 memory=    489 kb  tot_iter=      22
+ output: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.mt3
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps=   6 cpu clock=  5.98E+01
+ tran: time= 5.0000E-07 tot_iter=       2 conv_iter=       1 cpu clock= 5.98E+01
+ tran: time= 1.0000E-06 tot_iter=       4 conv_iter=       2 cpu clock= 5.98E+01
+ tran: time= 1.5000E-06 tot_iter=   34129 conv_iter=   10666 cpu clock= 6.10E+01
+ tran: time= 2.0001E-06 tot_iter=   68222 conv_iter=   21320 cpu clock= 6.21E+01
+ tran: time= 2.5001E-06 tot_iter=  102308 conv_iter=   31972 cpu clock= 6.32E+01
+ tran: time= 3.0000E-06 tot_iter=  136403 conv_iter=   42627 cpu clock= 6.44E+01
+ tran: time= 3.5000E-06 tot_iter=  170492 conv_iter=   53280 cpu clock= 6.55E+01
+ tran: time= 4.0001E-06 tot_iter=  204585 conv_iter=   63934 cpu clock= 6.67E+01
+ tran: time= 4.5000E-06 tot_iter=  238675 conv_iter=   74587 cpu clock= 6.78E+01
+ tran: time= 5.0000E-06 tot_iter=  272767 conv_iter=   85241 cpu clock= 6.90E+01
+ sweep: tran tran0    end,  cpu clock=  6.90E+01 memory=    489 kb
+>info:         ***** hspice job concluded
+>alter:
+ init: begin read circuit files,  cpu clock=  6.90E+01
+ init: end read circuit files,  cpu clock=  6.90E+01 memory=    307 kb
+ init: begin check errors,  cpu clock=  6.90E+01
+ init: end check errors,  cpu clock=  6.90E+01 memory=    444 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  6.90E+01
+       establish matrix -- done,  cpu clock=  6.90E+01 memory=    461 kb
+       re-order matrix -- done,  cpu clock=  6.90E+01 memory=    469 kb
+ init: end setup matrix,  cpu clock=  6.90E+01 memory=    505 kb
+ dcop: begin dcop,  cpu clock=  6.90E+01
+ dcop: end dcop,  cpu clock=  6.90E+01 memory=    505 kb  tot_iter=       5
+ output: c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.mt4
+ sweep: tran tran0    begin, stop_t=  5.00E-06 #sweeps=   6 cpu clock=  6.90E+01
+ tran: time= 5.0000E-07 tot_iter=       2 conv_iter=       1 cpu clock= 6.90E+01
+ tran: time= 1.0000E-06 tot_iter=       4 conv_iter=       2 cpu clock= 6.90E+01
+ tran: time= 1.5036E-06 tot_iter=     344 conv_iter=      32 cpu clock= 6.90E+01
+ tran: time= 2.2083E-06 tot_iter=     350 conv_iter=      35 cpu clock= 6.90E+01
+ tran: time= 2.6316E-06 tot_iter=     352 conv_iter=      36 cpu clock= 6.90E+01
+ tran: time= 3.2740E-06 tot_iter=     354 conv_iter=      37 cpu clock= 6.90E+01
+ tran: time= 4.1341E-06 tot_iter=     356 conv_iter=      38 cpu clock= 6.90E+01
+ tran: time= 5.0000E-06 tot_iter=     358 conv_iter=      39 cpu clock= 6.90E+01
+ sweep: tran tran0    end,  cpu clock=  6.90E+01 memory=    506 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ lic: Release hspice token(s)

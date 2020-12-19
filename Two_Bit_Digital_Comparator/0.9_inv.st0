@@ -1,0 +1,55 @@
+****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******
+ Input File: 0.9_inv.sp
+ lic:
+ lic: FLEXlm: v11.2.1
+ lic: USER:   user                 HOSTNAME: acer
+ lic: HOSTID: "28e3479845c2"       PID:      141332
+ lic: Using FLEXlm license file:
+ lic: 27000@acer
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 30-dec-2020/2019.2019
+ lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@acer
+ lic:
+ init: begin read circuit files,  cpu clock=  2.26E-01
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\behave\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\AD\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\XILINX\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\TLINE\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\TI\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\SIGNET\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\PCI\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\LIN_TECH\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\PET\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\DI0\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\COMLINE\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\BURR_BRM\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\BJT\
+       option runlvl
+       option post =     2.00
+ init: end read circuit files,  cpu clock=  2.31E-01 peak memory=        44 mb
+ init: begin check errors,  cpu clock=  2.31E-01
+ init: end check errors,  cpu clock=  2.36E-01 peak memory=        45 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.36E-01
+       establish matrix -- done,  cpu clock=  2.37E-01 peak memory=        45 mb
+       re-order matrix -- done,  cpu clock=  2.37E-01 peak memory=        45 mb
+ init: end setup matrix,  cpu clock=  2.37E-01 peak memory=        45 mb
+ output: C:\Users\user\Desktop\university\hspice\circuit\Two_Bit_Digital_Compara
+ sweep: dc dc0    begin, #sweeps=  37 cpu clock=  2.38E-01
+ sweep: dc dc0    end,  cpu clock=  2.40E-01 peak memory=        45 mb
+ dcop: begin dcop,  cpu clock=  2.48E-01
+ dcop: end dcop,  cpu clock=  2.78E-01 peak memory=        45 mb  tot_iter=       4
+ output: C:\Users\user\Desktop\university\hspice\circuit\Two_Bit_Digital_Compara
+ sweep: tran tran0    begin, stop_t=  2.00E-05 #sweeps=   3 cpu clock=  2.79E-01
+ tran: time= 2.0010E-06 tot_iter=      50 conv_iter=      22 cpu clock= 2.81E-01
+ tran: time= 4.0010E-06 tot_iter=     134 conv_iter=      58 cpu clock= 2.84E-01
+ tran: time= 6.0010E-06 tot_iter=     218 conv_iter=      94 cpu clock= 2.86E-01
+ tran: time= 8.0010E-06 tot_iter=     302 conv_iter=     130 cpu clock= 2.88E-01
+ tran: time= 1.0001E-05 tot_iter=     386 conv_iter=     166 cpu clock= 2.90E-01
+ tran: time= 1.2001E-05 tot_iter=     470 conv_iter=     202 cpu clock= 2.92E-01
+ tran: time= 1.4001E-05 tot_iter=     554 conv_iter=     238 cpu clock= 2.93E-01
+ tran: time= 1.6001E-05 tot_iter=     638 conv_iter=     274 cpu clock= 2.95E-01
+ tran: time= 1.8001E-05 tot_iter=     722 conv_iter=     310 cpu clock= 2.97E-01
+ tran: time= 2.0000E-05 tot_iter=     806 conv_iter=     346 cpu clock= 2.99E-01
+ sweep: tran tran0    end,  cpu clock=  2.99E-01 peak memory=        45 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

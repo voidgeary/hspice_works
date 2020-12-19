@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "14:21:06 11/28/2019 "
+* "netlist" "c:\users\user\desktop\vlsi\ring_oscillator\0.9_nand2.sp "
+* "runtitle" "#0.9v_nand2"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ b =   0.            
++ out =   1.8000        
++ s_1 = 402.9191m       
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     

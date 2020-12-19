@@ -1,0 +1,28 @@
+***** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******
+ Input File: c:\users\user\desktop\vlsi\programmable_output_driver\output_stage1
+ lic: No 'set LM_LICENSE_FILE' in current environment'
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   user                 HOSTNAME: user-PC
+ lic: HOSTID: b06ebfcbfc4a         PID:      6444
+ lic: Using FLEXlm license file:
+ lic: C:\flexlm\license.dat
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9
+ lic: NODE LOCKED license on hostid b06ebfcbfc4a
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ init: begin read circuit files,  cpu clock=  4.70E-01
+ init: end read circuit files,  cpu clock=  4.70E-01 memory=    151 kb
+ init: begin check errors,  cpu clock=  4.70E-01
+ init: end check errors,  cpu clock=  4.81E-01 memory=    286 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  4.81E-01
+       establish matrix -- done,  cpu clock=  4.82E-01 memory=    293 kb
+       re-order matrix -- done,  cpu clock=  4.82E-01 memory=    295 kb
+ init: end setup matrix,  cpu clock=  4.82E-01 memory=    314 kb
+ output: c:\users\user\desktop\vlsi\programmable_output_driver\output_stage1.sw0
+ sweep: dc dc0    begin, #sweeps=  37 cpu clock=  4.82E-01
+ sweep: dc dc0    end,  cpu clock=  4.92E-01 memory=    314 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ lic: Release hspice token(s)

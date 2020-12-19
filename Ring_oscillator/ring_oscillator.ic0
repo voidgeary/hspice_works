@@ -1,0 +1,28 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "13:58:04 12/05/2019 "
+* "netlist" "c:\users\user\desktop\vlsi\ring_oscillator\ring_oscillator.sp "
+* "runtitle" "#ring_oscillator"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ out =   1.8000        
++ t1 =   1.8000        
++ t2 =   1.8000        
++ t3 =   1.8000        
++ t4 =   1.8000        
++ t5 =   1.8000        
++ vc =   0.            
++ vdd =   1.8000        
++ vo =  32.9339n       
++ x1.s_1 = 147.3489n       
++ x2.temp =  32.9339n       
++ x3.temp =  32.9339n       
++ x4.temp =  32.9339n       
++ x5.temp =  32.9339n       
++ x7.temp =  32.9339n       
+***   END: Saved Operating Point ***                     

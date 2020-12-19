@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='A-2008.03 32-BIT'
+.TITLE '#programmable_output_driver'
+ tr               tf               tmis             maxi              
+ temper           alter#            
+  1.664e-08        1.649e-08        1.502e-10        1.234e-02        
+   75.0000           3.0000         

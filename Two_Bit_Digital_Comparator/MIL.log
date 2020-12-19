@@ -1,0 +1,31 @@
+pnlAddPane();
+nil
+1
+designOpen("d:\\_\\vlsi\\two_bit_digital_comparator\\two_bit_digital_comparator.sp");
+"D0"
+t
+pnlAddCurve(1, node(D0,"A0","v(xlargey)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(xequaly)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(xsmally)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(y1)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(y0)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(x1)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(x0)"), node(D0,"A0","TIME"));
+nil
+pnlUnselectPane(1, 0);
+nil
+pnlSelectPane(1);
+nil
+planSave("tbdc");
+t
+quit();
+exit
+pnlDeletePane(1, 1);
+nil
+nil

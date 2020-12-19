@@ -1,0 +1,42 @@
+***** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) winnt ******
+ Input File: d:\_\vlsi\two_bit_digital_comparator\two_bit_digital_comparator.sp
+ lic: No 'set LM_LICENSE_FILE' in current environment'
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   user                 HOSTNAME: user-PC
+ lic: HOSTID: b06ebfcbfcfa         PID:      4556
+ lic: Using FLEXlm license file:
+ lic: C:\flexlm\license.dat
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9
+ lic: NODE LOCKED license on hostid b06ebfcbfcfa
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ init: begin read circuit files,  cpu clock=  9.00E-01
+       option accura   =     0.00
+       option post     =     2.00
+ init: end read circuit files,  cpu clock=  1.04E+00 memory=    153 kb
+ init: begin check errors,  cpu clock=  1.04E+00
+ init: end check errors,  cpu clock=  1.09E+00 memory=    557 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  1.09E+00
+       establish matrix -- done,  cpu clock=  1.11E+00 memory=    603 kb
+       re-order matrix -- done,  cpu clock=  1.11E+00 memory=    626 kb
+ init: end setup matrix,  cpu clock=  1.15E+00 memory=    706 kb
+ dcop: begin dcop,  cpu clock=  1.16E+00
+ dcop: end dcop,  cpu clock=  1.20E+00 memory=    706 kb  tot_iter=      18
+ output: d:\_\vlsi\two_bit_digital_comparator\two_bit_digital_comparator.mt0
+ sweep: tran tran0    begin, stop_t=  1.62E-04 #sweeps=**** cpu clock=  1.24E+00
+ tran: time= 1.6304E-05 tot_iter=     274 conv_iter=      82 cpu clock= 1.44E+00
+ tran: time= 3.2500E-05 tot_iter=     519 conv_iter=     149 cpu clock= 1.53E+00
+ tran: time= 4.9107E-05 tot_iter=     980 conv_iter=     278 cpu clock= 1.67E+00
+ tran: time= 6.5050E-05 tot_iter=    1467 conv_iter=     414 cpu clock= 1.81E+00
+ tran: time= 8.2000E-05 tot_iter=    1670 conv_iter=     476 cpu clock= 1.93E+00
+ tran: time= 9.8907E-05 tot_iter=    2169 conv_iter=     611 cpu clock= 2.09E+00
+ tran: time= 1.1409E-04 tot_iter=    2624 conv_iter=     735 cpu clock= 2.21E+00
+ tran: time= 1.3141E-04 tot_iter=    2931 conv_iter=     824 cpu clock= 2.32E+00
+ tran: time= 1.5200E-04 tot_iter=    3323 conv_iter=     934 cpu clock= 2.43E+00
+ tran: time= 1.6200E-04 tot_iter=    3495 conv_iter=     982 cpu clock= 2.49E+00
+ sweep: tran tran0    end,  cpu clock=  2.49E+00 memory=    708 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2008.03\hspice.ini
+ lic: Release hspice token(s)

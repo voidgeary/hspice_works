@@ -1,0 +1,17 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "15:07:43 12/05/2019 "
+* "netlist" "c:\users\user\desktop\vlsi\programmable_output_driver\output_stage.sp "
+* "runtitle" "#output_stage"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ gn =   0.            
++ gp =   0.            
++ out =   1.8000        
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     
